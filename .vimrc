@@ -10,11 +10,18 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'yggdroot/indentline'
 Plugin 'scrooloose/nerdtree'
-Plugin 'vim-airline/vim-airline-themes'
 Plugin 'kien/ctrlp.vim'
 Plugin 'morhetz/gruvbox'
+Plugin 'scrooloose/syntastic'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'ervandew/supertab'
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'matze/vim-move'
+Plugin 'mhinz/vim-startify'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -48,11 +55,13 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 "
-autocmd vimenter * ++nested colorscheme gruvbox
+colorscheme gruvbox
 filetype plugin indent on
+" airline
 let g:airline_powerline_fonts = 1
 let g:airline_theme='gruvbox'
 let g:airline_section_warning = '%{strftime("%H:%M")}'
+" ctrp
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = '0'
@@ -60,6 +69,26 @@ let g:ctrlp_custom_ignore = {
     \ 'dir':  '\v[\/]\.(git|hg|svn|rvm)$',
     \ 'file': '\v\.(exe|so|dll|zip|tar|tar.gz|pyc)$',
     \ }
+" syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+" supertab
+let g:SuperTabMappingForward='<s-tab>'
+let g:SuperTabMappingBackward='<tab>'
+" set leader key
+nnoremap <SPACE> <Nop>
+let mapleader=","
+" vim-move
+vmap <C-j> <Plug>MoveBlockDown
+vmap <C-k> <Plug>MoveBlockUp
+nmap <C-j> <Plug>MoveLineDown
+nmap <C-k> <Plug>MoveLineUp
+
 set encoding=utf-8
 set clipboard=unnamed
 set showcmd
@@ -81,7 +110,6 @@ set number
 set backspace=2
 set number relativenumber
 
-
 nnoremap ∆ :m .+1<CR>==
 nnoremap ˚ :m .-2<CR>==
 nnoremap <leader>n :NERDTreeFocus<CR>
@@ -102,5 +130,4 @@ function! StatuslineGit()
   let l:branchname = GitBranch()
   return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
 endfunction
-
 
