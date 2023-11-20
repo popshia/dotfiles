@@ -9,3 +9,5 @@
 - shell prompt: [starship](https://github.com/starship/starship)
 - packages update: [topgrade](https://github.com/topgrade-rs/topgrade)
 - font: [NerdFont(JetBrainsMono)](https://github.com/ryanoasis/nerd-fonts)
+
+## Use Stow to symlink dotfiles.
