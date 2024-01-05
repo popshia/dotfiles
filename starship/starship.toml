@@ -134,3 +134,9 @@ disabled = true
 [time]
 disabled = false
 time_format = "%H:%M %b %d"
+
+[username]
+style_root = "bold red"
+style_user = "bold blue"
+format = "[$user]($style) in "
+show_always = true
