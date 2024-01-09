@@ -14,6 +14,7 @@
    * [starship](#starship)
    * [install and symlink fdfind and batcat](#install-and-symlink-fdfind-and-batcat)
    * [clone dotfiles and configs](#clone-dotfiles-and-configs)
+   * [nerdfont](#nerdfont)
    * [fzf](#fzf)
    * [miniconda](#miniconda)
    * [change login shell and install fisher plugins](#change-login-shell-and-install-fisher-plugins)
@@ -56,6 +57,10 @@ ln -s $(which batcat) ~/.local/bin/bat
 mkdir ~/repos
 git clone http://github.com/popshia/dotfiles ~/repos/dotfiles
 git clone http://github.com/popshia/nvim ~/.config/nvim
+```
+### nerdfont
+```bash
+curl -fsSL https://raw.githubusercontent.com/ronniedroid/getnf/master/install.sh | bash
 ```
 ### fzf
 ```bash
