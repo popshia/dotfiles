@@ -1,5 +1,22 @@
 # My dotfiles
 
+## Installing
+
+You will need `git` and GNU `stow`
+Clone into your `$HOME` directory or `~`
+```bash
+git clone https://github.com/popshia/dotfiles ~
+```
+Run `stow` to symlink everything or just select what you want
+```bash
+stow */ # Everything (the '/' ignores the README)
+```
+or
+```bash
+stow fish # Just my fish config
+```
+## Stuffs I've been using
+
 - terminal: [kitty (minimum version 0.31.0)](https://github.com/kovidgoyal/kitty)
 - editor: [neovim](https://github.com/neovim/neovim)
 - shell: [fish (minimum version: 3.4.0)](https://github.com/fish-shell/fish-shell)
@@ -8,6 +25,5 @@
 - file finding: [fd (minimum version: 8.5.0)](https://github.com/sharkdp/fd)
 - file previewing: [bat (minimum version: 0.16.0)](https://github.com/sharkdp/bat)
 - font: [NerdFont (JetBrainsMono)](https://github.com/ryanoasis/nerd-fonts)
-- mac keybindings: [hammerspoon](https://github.com/Hammerspoon/hammerspoon)
-
-> Use Stow to symlink dotfiles.
+- linux key-remapping: [xmodmap](https://wiki.archlinux.org/title/xmodmap)
+- mac keyboard shortcuts: [hammerspoon](https://github.com/Hammerspoon/hammerspoon)
