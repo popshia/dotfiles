@@ -20,7 +20,7 @@ stow fish # Just my fish config
 ## Stuffs I've been using
 
 - terminal: [kitty (minimum version 0.31.0)](https://github.com/kovidgoyal/kitty)
-- editor: [neovim](https://github.com/neovim/neovim)
+- editor: [neovim (my nvim config repo)](https://github.com/popshia/nvim)
 - shell: [fish (minimum version: 3.4.0)](https://github.com/fish-shell/fish-shell)
 - shell prompt: [starship](https://github.com/starship/starship)
 - fuzzy finding: [fzf (minimum version: 0.33.0)](https://github.com/junegunn/fzf)
