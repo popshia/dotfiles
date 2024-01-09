@@ -1,6 +1,6 @@
 # My dotfiles
 
-![screen-shot](./screen_shot.png) 
+![screen-shot](./screenshot.png) 
 
 ## Installing
 
