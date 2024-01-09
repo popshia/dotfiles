@@ -1,3 +1,3 @@
 function lt
-    eza --tree --level=3 --icons $argv
+    eza --tree --level=3 --icons --all --git-ignore $argv
 end
