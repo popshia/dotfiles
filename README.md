@@ -11,11 +11,11 @@ git clone https://github.com/popshia/dotfiles ~
 ```
 Run `stow` to symlink everything or just select what you want
 ```bash
-stow */ # Everything (the '/' ignores the README)
+stow --target=${HOME} */ # Everything (the '/' ignores the README)
 ```
 or
 ```bash
-stow fish # Just my fish config
+stow --target=${HOME} fish # Just my fish config
 ```
 ## Stuffs I've been using
 
