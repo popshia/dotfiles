@@ -1,5 +1,7 @@
 # My dotfiles
 
+![screen-shot](./screen_shot.png) 
+
 ## Installing
 
 You will need `git` and GNU `stow`
