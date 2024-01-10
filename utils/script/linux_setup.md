@@ -25,7 +25,7 @@
 apt-add-repository ppa:fish-shell/release-3 -y
 apt update && apt upgrade -y
 apt install nala
-nala install fish ripgrep htop fd-find batcat trash-cli kitty-terminfo
+nala install fish ripgrep htop fd-find batcat trash-cli kitty-terminfo ranger
 ```
 ### install neovim with snap
 ```bash
