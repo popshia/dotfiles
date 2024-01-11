@@ -54,29 +54,30 @@ sudo groupadd docker
 sudo gpasswd -a $USER docker
 sudo reboot
 ```
-[Docker reference](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
+[Docker reference](https://docs.docker.com/engine/install/ubuntu/)
+
 ## Install nvidia-docker
 ```bash
-# old
-distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
-curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
-curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
-sudo apt-get update && sudo apt-get install -y nvidia-container-toolkit
-sudo systemctl restart docker
-# new
 curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
   && curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \
     sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
     sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
 sed -i -e '/experimental/ s/^#//g' /etc/apt/sources.list.d/nvidia-container-toolkit.list
 sudo apt update && sudo apt install -y nvidia-container-toolkit
+sudo nvidia-ctk runtime configure --runtime=docker
+sudo systemctl restart docker
+sudo nvidia-ctk runtime configure --runtime=containerd
+sudo systemctl restart containerd
+sudo nvidia-ctk runtime configure --runtime=crio
+sudo systemctl restart crio
 ```
-[nvidia-docker reference]( https://github.com/NVIDIA/nvidia-docker )
-
+[nvidia-docker reference](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
 ## Test
 ```bash
-docker run --gpus all nvidia/cuda:10.0-base nvidia-smi
+docker run --rm --runtime=nvidia --gpus all nvidia/cuda:12.3.1-devel-ubuntu22.04 nvidia-smi
 ```
+[dockerhub-nvidia/cuda](https://hub.docker.com/r/nvidia/cuda/)
+
 ## Install VNC
 ```bash
 git clone --recursive https://github.com/fcwu/docker-ubuntu-vnc-desktop
@@ -86,7 +87,7 @@ git submodule init; git submodule update
 ## Make image
 ```bash
 make clean
-FLAVOR=lxqt ARCH=amd64 IMAGE=nvidia/cuda:12.3.1-devel-ubuntu20.04 make build
+FLAVOR=lxqt ARCH=amd64 IMAGE=nvidia/cuda:12.3.1-devel-ubuntu22.04 make build
 make run
 ```
 ## IP settings
