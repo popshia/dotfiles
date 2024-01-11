@@ -25,7 +25,7 @@
 sudo apt-add-repository ppa:fish-shell/release-3 -y
 sudo apt update && apt upgrade -y
 sudo apt install nala
-sudo nala install -y fish ripgrep htop fd-find bat trash-cli kitty-terminfo ranger curl stow gpg gnome-tweaks gnome-shell-extension-manager
+sudo nala install -y fish ripgrep htop fd-find bat trash-cli kitty-terminfo ranger curl stow gpg gnome-tweaks gnome-shell-extension-manager npm
 ```
 ### install eza
 ```bash
