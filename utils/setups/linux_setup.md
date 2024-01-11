@@ -15,6 +15,7 @@
   * [starship](#starship)
   * [install and symlink fd and bat](#install-and-symlink-fd-and-bat)
   * [clone dotfiles and configs](#clone-dotfiles-and-configs)
+  * [clone and build advcpmv](#clone-and-build-advcpmv)
   * [nerdfont](#nerdfont)
   * [fzf](#fzf)
   * [miniconda](#miniconda)
@@ -75,6 +76,10 @@ sudo ln -s $(which batcat) /usr/local/bin/bat
 mkdir ~/repos
 git clone http://github.com/popshia/dotfiles ~/repos/dotfiles
 git clone http://github.com/popshia/nvim ~/.config/nvim
+```
+### clone and build advcpmv
+```bash
+curl https://raw.githubusercontent.com/jarun/advcpmv/master/install.sh --create-dirs -o ./advcpmv/install.sh && (cd advcpmv && sh install.sh)
 ```
 ### nerdfont
 ```bash
