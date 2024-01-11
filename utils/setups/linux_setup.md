@@ -5,52 +5,62 @@
 - __Date:__ 2024-01-09
 
 # Table of Contents
-1. [Admin (sudo)](#admin-(sudo))
-   * [apt and essential packages](#apt-and-essential-packages)
-   * [install neovim with snap](#install-neovim-with-snap)
-2. [User](#user)
-   * [switch user](#switch-user)
-   * [install and symlink kitty](#install-and-symlink-kitty)
-   * [starship](#starship)
-   * [install and symlink fdfind and batcat](#install-and-symlink-fdfind-and-batcat)
-   * [clone dotfiles and configs](#clone-dotfiles-and-configs)
-   * [nerdfont](#nerdfont)
-   * [fzf](#fzf)
-   * [miniconda](#miniconda)
-   * [change login shell and install fisher plugins](#change-login-shell-and-install-fisher-plugins)
-## Admin (sudo)
-
+  * [apt and essential packages](#apt-and-essential-packages)
+  * [install eza](#install-eza)
+  * [install neovim with snap](#install-neovim-with-snap)
+  * [install vivid](#install-vivid)
+  * [run gogh to generate colorscheme](#run-gogh-to-generate-colorscheme)
+  * [install and symlink kitty](#install-and-symlink-kitty)
+  * [starship](#starship)
+  * [install and symlink fd and bat](#install-and-symlink-fd-and-bat)
+  * [clone dotfiles and configs](#clone-dotfiles-and-configs)
+  * [nerdfont](#nerdfont)
+  * [fzf](#fzf)
+  * [miniconda](#miniconda)
+  * [change login shell and install fisher plugins](#change-login-shell-and-install-fisher-plugins)
 ### apt and essential packages
 ```bash
-apt-add-repository ppa:fish-shell/release-3 -y
-apt update && apt upgrade -y
-apt install nala
-nala install fish ripgrep htop fd-find batcat trash-cli kitty-terminfo ranger
+sudo apt-add-repository ppa:fish-shell/release-3 -y
+sudo apt update && apt upgrade -y
+sudo apt install nala
+sudo nala install -y fish ripgrep htop fd-find bat trash-cli kitty-terminfo ranger curl stow gpg
+```
+### install eza
+```bash
+sudo mkdir -p /etc/apt/keyrings
+wget -qO- https://raw.githubusercontent.com/eza-community/eza/main/deb.asc | sudo gpg --dearmor -o /etc/apt/keyrings/gierens.gpg
+echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable main" | sudo tee /etc/apt/sources.list.d/gierens.list
+sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list
+sudo nala update
+sudo nala install -y eza
 ```
 ### install neovim with snap
 ```bash
 snap install nvim --classic
 ```
-## User
-
-### switch user
+### install vivid
 ```bash
-su $YOUR_USER_NAME
+wget "https://github.com/sharkdp/vivid/releases/download/v0.8.0/vivid_0.8.0_amd64.deb"
+sudo dpkg -i vivid_0.8.0_amd64.deb
+```
+### run gogh to generate colorscheme
+```bash
+bash -c "$(wget -qO- https://git.io/vQgMr)"
 ```
 ### install and symlink kitty
 ```bash
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
-ln -s ~/.local/kitty.app/bin/kitty /usr/local/bin/kitty
-ln -s ~/.local/kitty.app/bin/kitten /usr/local/bin/kitten
+sudo ln -s ~/.local/kitty.app/bin/kitty /usr/local/bin/kitty
+sudo ln -s ~/.local/kitty.app/bin/kitten /usr/local/bin/kitten
 ```
 ### starship
 ```bash
 curl -sS https://starship.rs/install.sh | sh
 ```
-### install and symlink fdfind and batcat
+### install and symlink fd and bat
 ```bash
-ln -s $(which fdfind) ~/.local/bin/fd
-ln -s $(which batcat) ~/.local/bin/bat
+sudo ln -s $(which fdfind) /usr/local/bin/fd
+sudo ln -s $(which batcat) /usr/local/bin/bat
 ```
 ### clone dotfiles and configs
 ```bash
@@ -80,9 +90,5 @@ rm -rf ~/miniconda3/miniconda.sh
 chsh -s /usr/bin/fish
 fish
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
-fisher install PatrickF1/fzf.fish \
-	jhillyerd/plugin-git \
-	jethrokuan/z \
-	jorgebucaran/autopair.fish \
-	nickeb96/puffer-fish
+fisher install PatrickF1/fzf.fish jhillyerd/plugin-git jethrokuan/z jorgebucaran/autopair.fish nickeb96/puffer-fish
 ```
