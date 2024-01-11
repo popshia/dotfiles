@@ -20,6 +20,7 @@
   * [fzf](#fzf)
   * [miniconda](#miniconda)
   * [change login shell and install fisher plugins](#change-login-shell-and-install-fisher-plugins)
+  * [setup github-cli](#setup-github-cli)
 ### apt and essential packages
 ```bash
 sudo apt-add-repository ppa:fish-shell/release-3 -y
@@ -105,4 +106,13 @@ chsh -s /usr/bin/fish
 fish
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 fisher install PatrickF1/fzf.fish jhillyerd/plugin-git jethrokuan/z jorgebucaran/autopair.fish nickeb96/puffer-fish
+```
+### setup github-cli
+```bash
+type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
+&& sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
+&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
+&& sudo nala update \
+&& sudo nala install gh -y
 ```
