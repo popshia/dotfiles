@@ -39,7 +39,12 @@ sudo nala install -y eza
 ```
 ### install neovim with snap
 ```bash
+# install with snap
 snap install nvim --classic
+# or download the executable from official repo
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+chmod u+x ./nvim.appimage
+sudo mv ./nvim.appimage /usr/local/bin/nvim
 ```
 ### install vivid
 ```bash
