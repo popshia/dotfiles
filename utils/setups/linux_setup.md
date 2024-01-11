@@ -10,6 +10,7 @@
   * [install neovim with snap](#install-neovim-with-snap)
   * [install vivid](#install-vivid)
   * [run gogh to generate colorscheme](#run-gogh-to-generate-colorscheme)
+  * [install input-remapper](#install-input-remapper)
   * [install and symlink kitty](#install-and-symlink-kitty)
   * [starship](#starship)
   * [install and symlink fd and bat](#install-and-symlink-fd-and-bat)
@@ -46,6 +47,13 @@ sudo dpkg -i vivid_0.8.0_amd64.deb
 ### run gogh to generate colorscheme
 ```bash
 bash -c "$(wget -qO- https://git.io/vQgMr)"
+```
+### install input-remapper
+```bash
+sudo apt install git python3-setuptools gettext
+git clone https://github.com/sezanzeb/input-remapper.git
+cd input-remapper && ./scripts/build.sh
+sudo apt install -f ./dist/input-remapper-2.0.1.deb
 ```
 ### install and symlink kitty
 ```bash
