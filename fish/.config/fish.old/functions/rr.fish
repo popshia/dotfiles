@@ -1,3 +1,0 @@
-function rr
-	ranger
-end
