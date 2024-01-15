@@ -50,3 +50,6 @@ Temporary Items
 .nfs*
 
 # End of https://www.toptal.com/developers/gitignore/api/linux
+
+### What I want to ignore ###
+fish/.config/fish/fish_variables

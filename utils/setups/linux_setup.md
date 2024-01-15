@@ -23,7 +23,7 @@
   * [setup github-cli](#setup-github-cli)
 ### apt and essential packages
 ```bash
-sudo apt-add-repository ppa:fish-shell/release-3 -y
+sudo apt-add-repository -y ppa:fish-shell/release-3
 sudo apt update && apt upgrade -y
 sudo apt install nala
 sudo nala install -y fish ripgrep htop fd-find bat trash-cli kitty-terminfo ranger curl stow gpg gnome-tweaks gnome-shell-extension-manager npm
@@ -34,8 +34,11 @@ sudo mkdir -p /etc/apt/keyrings
 wget -qO- https://raw.githubusercontent.com/eza-community/eza/main/deb.asc | sudo gpg --dearmor -o /etc/apt/keyrings/gierens.gpg
 echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable main" | sudo tee /etc/apt/sources.list.d/gierens.list
 sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list
-sudo nala update
-sudo nala install -y eza
+sudo nala update && sudo nala install -y eza
+```
+### install zoxide
+```bash
+curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
 ```
 ### install neovim with snap
 ```bash
@@ -60,7 +63,7 @@ bash -c "$(wget -qO- https://git.io/vQgMr)"
 sudo apt install git python3-setuptools gettext
 git clone https://github.com/sezanzeb/input-remapper.git
 cd input-remapper && ./scripts/build.sh
-sudo apt install -f ./dist/input-remapper-2.0.1.deb
+sudo apt install -y -f ./dist/input-remapper-2.0.1.deb
 ```
 ### install and symlink kitty
 ```bash
@@ -109,15 +112,11 @@ conda config --set changeps1 False
 ```bash
 chsh -s /usr/bin/fish
 fish
-curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
-fisher install PatrickF1/fzf.fish jhillyerd/plugin-git jethrokuan/z jorgebucaran/autopair.fish nickeb96/puffer-fish
+stow --target=$HOME fish starship ranger kitty
+fisher update
 ```
 ### setup github-cli
 ```bash
 type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
-curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
-&& sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
-&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
-&& sudo nala update \
-&& sudo nala install gh -y
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg && sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null && sudo nala update && sudo nala install gh -y
 ```
