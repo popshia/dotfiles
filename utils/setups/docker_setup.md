@@ -17,13 +17,13 @@
 ## Install nvidia drivers
 ```bash
 # check
-sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo add-apt-repository -y ppa:graphics-drivers/ppa
 sudo apt update
-sudo apt install ubuntu-drivers-common
+sudo apt install -y ubuntu-drivers-common ctop
 # check device drivers
 ubuntu-drivers devices
 # auto install drivers
-ubuntu-drivers autoinstall
+sudo ubuntu-drivers autoinstall
 # or choose the recommend driver
 sudo apt install (nvidia-430)
 # reboot to take effects
@@ -38,10 +38,7 @@ sudo install -m 0755 -d /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 sudo chmod a+r /etc/apt/keyrings/docker.gpg
 # Add the repository to Apt sources:
-echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
 # Install the latest version
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
@@ -80,15 +77,16 @@ docker run --rm --runtime=nvidia --gpus all nvidia/cuda:12.3.1-devel-ubuntu22.04
 git clone --recursive https://github.com/fcwu/docker-ubuntu-vnc-desktop
 cd docker-ubuntu-vnc-desktop
 git submodule init; git submodule update
-```
-## Make image
-```bash
 make clean
 FLAVOR=lxqt ARCH=amd64 IMAGE=nvidia/cuda:12.3.1-devel-ubuntu22.04 make build
 make run
 ```
-## IP settings
+## IP settings (?)
 ```bash
-limit ip
-sudo iptables -I DOCKER-USER -m iprange -i enp5s0 ! --src-range 140.135.10.210-140.135.11.221 -j DROP
+sudo iptables -I DOCKER-USER -m iprange -i enp5s0 ! --src-range 192.168.6.8 -j DROP
+```
+## Install ctop
+```bash
+sudo wget https://github.com/bcicen/ctop/releases/download/v0.7.7/ctop-0.7.7-linux-amd64 -O /usr/local/bin/ctop
+sudo chmod +x /usr/local/bin/ctop
 ```
