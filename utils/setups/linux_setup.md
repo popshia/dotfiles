@@ -7,6 +7,7 @@
 # Table of Contents
   * [apt and essential packages](#apt-and-essential-packages)
   * [install eza](#install-eza)
+  * [install zoxide](#install-zoxide)
   * [install neovim with snap](#install-neovim-with-snap)
   * [install vivid](#install-vivid)
   * [run gogh to generate colorscheme](#run-gogh-to-generate-colorscheme)
@@ -21,6 +22,7 @@
   * [miniconda](#miniconda)
   * [change login shell and install fisher plugins](#change-login-shell-and-install-fisher-plugins)
   * [setup github-cli](#setup-github-cli)
+
 ### apt and essential packages
 ```bash
 sudo apt-add-repository -y ppa:fish-shell/release-3
