@@ -14,40 +14,27 @@ set fzf_preview_dir_cmd eza --grid --icons $argv
 set fzf_directory_opts --bind "L:execute(nvim {} &> /dev/tty)"
 
 # set variables
+set -gx LC_ALL C.UTF-8
+set -gx LANG C.UTF-8
 set -gx BAT_THEME "ansi"
 set -gx LS_COLORS (vivid generate gruvbox-dark)
 set -gx EDITOR (which nvim)
 set -gx VISUAL $EDITOR
+set -gx SUDO_EDITOR $EDITOR
 set -gx STARSHIP_CONFIG ~/.config/starship/starship.toml
+
+# add path
+fish_add_path ~/.local/bin
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-switch (uname)
-	case Darwin
-		if test -f /opt/homebrew/Caskroom/miniconda/base/bin/conda
-			eval /opt/homebrew/Caskroom/miniconda/base/bin/conda "shell.fish" "hook" $argv | source
-		else
-			if test -f "/opt/homebrew/Caskroom/miniconda/base/etc/fish/conf.d/conda.fish"
-				. "/opt/homebrew/Caskroom/miniconda/base/etc/fish/conf.d/conda.fish"
-			else
-				set -x PATH "/opt/homebrew/Caskroom/miniconda/base/bin" $PATH
-			end
-		end
-	case Linux
-		if test -f $HOME/miniconda3/bin/conda
-			eval $HOME/miniconda3/bin/conda "shell.fish" "hook" $argv | source
-		else
-			if test -f "$HOME/miniconda3/etc/fish/conf.d/conda.fish"
-				. "$HOME/miniconda3/etc/fish/conf.d/conda.fish"
-			else
-				set -x PATH "$HOME/miniconda3/bin" $PATH
-			end
-		end
-
-		# other linux specific settings
-		set -gx LC_ALL C.UTF-8
-		set -gx LANG C.UTF-8
-		set -gx SUDO_EDITOR $EDITOR
-		fish_add_path ~/.local/bin
+if test -f $HOME/miniconda3/bin/conda
+	eval $HOME/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+else
+	if test -f "$HOME/miniconda3/etc/fish/conf.d/conda.fish"
+		. "$HOME/miniconda3/etc/fish/conf.d/conda.fish"
+	else
+		set -x PATH "$HOME/miniconda3/bin" $PATH
+	end
 end
 # <<< conda initialize <<<
