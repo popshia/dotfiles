@@ -55,7 +55,7 @@ symbol = "exs "
 symbol = "elm "
 
 [git_branch]
-symbol = "git "
+symbol = "branch "
 
 [golang]
 symbol = "go "
