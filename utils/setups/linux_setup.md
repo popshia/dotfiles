@@ -42,14 +42,12 @@ sudo nala update && sudo nala install -y eza
 ```bash
 curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
 ```
-### install neovim with snap
+### build neovim
 ```bash
-# install with snap
-snap install nvim --classic
-# or download the executable from official repo
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-chmod u+x ./nvim.appimage
-sudo mv ./nvim.appimage /usr/local/bin/nvim
+sudo apt install ninja-build gettext cmake unzip curl
+git clone https://github.com/neovim/neovim
+cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo
+sudo make install
 ```
 ### install vivid
 ```bash
