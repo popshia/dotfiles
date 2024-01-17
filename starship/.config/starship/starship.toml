@@ -30,6 +30,10 @@ ignore_base = false
 [crystal]
 symbol = "cr "
 
+[container]
+style = 'bright-black'
+format = '[$symbol \[$name\]]($style) '
+
 [cmake]
 symbol = "cmake "
 
