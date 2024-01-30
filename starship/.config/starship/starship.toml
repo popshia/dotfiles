@@ -125,10 +125,12 @@ symbol = "scala "
 symbol = "spack "
 
 [sudo]
+disabled = true
 symbol = "sudo "
 
 [swift]
 symbol = "swift "
+
 [cmd_duration]
 disabled = true
 
