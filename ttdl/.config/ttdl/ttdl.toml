@@ -91,7 +91,7 @@ filename = "/home/noah/.todo-txt/todo.txt"
 fields = "done,pri,due"
 
 # default sorting
-# sort = "pri"
+sort = "pri"
 
 # shell to execute plugins. If not set, it defaults to:
 #   ["cmd", "/c"] on Windows
@@ -117,7 +117,7 @@ fields = "done,pri,due"
 # enables strict command-line mode: in this mode the first free command-line
 # argument must be a TTDL command. It may be useful to avoid adding incorrect
 # todos after making a type, e.g, `ttdl listt`
-# strict_mode = false
+strict_mode = false
 
 # defines what items from a subject will be removed before printing:
 #    none | nothing = subject is printed as-is (default)
