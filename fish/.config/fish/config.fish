@@ -26,11 +26,6 @@ set -gx STARSHIP_CONFIG ~/.config/starship/starship.toml
 # add path
 fish_add_path ~/.local/bin
 
-# abbreviations
-abbr vim "nvim"
-abbr top "gotop --nvidia"
-abbr rr "ranger"
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 if test -f $HOME/miniconda3/bin/conda
