@@ -309,3 +309,15 @@ Tags: #linux #ubuntu #PAM #laptop #setup #administration #cybersecurity
     #重製使用者USER的登入錯誤紀錄 (需要root權限)
     faillock --user <USER> --reset
     ```
+## 11. ISO related packages and commands
+- Disk Health: Install package `smartmontools`.
+    ```bash
+    # check disk
+    sudo smartctl -i {DISK_MOUNT_PATH}
+
+    # run disk test
+    sudo smartctl -t short {DISK_MOUNT_PATH}
+
+    # check test report and log to txt file
+    sudo smartctl -a {DISK_MOUNT_PATH} > {TXT_PATH}.txt
+    ```

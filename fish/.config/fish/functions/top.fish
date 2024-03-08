@@ -1,3 +1,3 @@
 function top
-	gotop --nvidia
+    gotop -l battery --nvidia
 end

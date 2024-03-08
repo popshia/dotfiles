@@ -26,9 +26,9 @@
 ### apt and essential packages
 ```bash
 sudo apt-add-repository -y ppa:fish-shell/release-3
-sudo apt update && apt upgrade -y
+sudo apt update && sudo apt upgrade -y
 sudo apt install nala
-sudo nala install -y fish ripgrep htop fd-find bat trash-cli kitty-terminfo ranger curl stow gpg gnome-tweaks gnome-shell-extension-manager npm
+sudo nala install -y fish ripgrep htop fd-find bat kitty-terminfo ranger curl stow gpg gnome-tweaks gnome-shell-extension-manager tldr fcitx5 fcitx5-chewing golang
 ```
 ### install eza
 ```bash
@@ -38,13 +38,18 @@ echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable
 sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list
 sudo nala update && sudo nala install -y eza
 ```
+### install nodejs for neovim
+```bash
+curl -fsSL https://deb.nodesource.com/setup_21.x | sudo -E bash - &&\
+sudo apt-get install -y nodejs
+```
 ### install zoxide
 ```bash
 curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
 ```
 ### build neovim
 ```bash
-sudo apt install ninja-build gettext cmake unzip curl
+sudo nala install ninja-build gettext cmake unzip curl
 git clone https://github.com/neovim/neovim
 cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo
 sudo make install
@@ -88,7 +93,7 @@ git clone http://github.com/popshia/nvim ~/.config/nvim
 ```
 ### clone and build advcpmv
 ```bash
-curl https://raw.githubusercontent.com/jarun/advcpmv/master/install.sh --create-dirs -o ./advcpmv/install.sh && (cd advcpmv && sh install.sh)
+curl https://raw.githubusercontent.com/jarun/advcpmv/master/install.sh --create-dirs -o ./advcpmv/install.sh && cd advcpmv && sh install.sh
 ```
 ### nerdfont
 ```bash
@@ -117,6 +122,14 @@ fisher update
 ```
 ### setup github-cli
 ```bash
-type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
+type -p curl >/dev/null || sudo apt update && sudo apt install curl -y
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg && sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null && sudo nala update && sudo nala install gh -y
+```
+### thorium browser
+```bash
+sudo rm -fv /etc/apt/sources.list.d/thorium.list && \
+sudo wget --no-hsts -P /etc/apt/sources.list.d/ \
+http://dl.thorium.rocks/debian/dists/stable/thorium.list && \
+sudo nala update
+sudo nala install thorium-browser
 ```
