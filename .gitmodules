@@ -1,3 +1,6 @@
 [submodule "utils/packages/advcpmv"]
 	path = utils/packages/advcpmv
 	url = https://github.com/jarun/advcpmv
+[submodule "utils/packages/neovim"]
+	path = utils/packages/neovim
+	url = https://github.com/neovim/neovim
