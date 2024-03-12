@@ -1,3 +1,3 @@
 function lf
-	eza --all --long --classify --only-files $argv
+    eza --all --classify --only-files --icons $argv
 end

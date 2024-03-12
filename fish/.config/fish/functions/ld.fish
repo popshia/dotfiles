@@ -1,3 +1,3 @@
 function ld
-	eza --long --only-dirs $argv
+    eza --only-dirs --icons $argv
 end

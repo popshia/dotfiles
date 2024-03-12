@@ -16,25 +16,28 @@ set fzf_directory_opts --bind "L:execute(nvim {} &> /dev/tty)"
 # set variables
 set -gx LC_ALL C.UTF-8
 set -gx LANG C.UTF-8
-set -gx BAT_THEME "ansi"
+set -gx BAT_THEME ansi
 set -gx LS_COLORS (vivid generate gruvbox-dark)
 set -gx EDITOR (which nvim)
 set -gx VISUAL $EDITOR
 set -gx SUDO_EDITOR $EDITOR
 set -gx STARSHIP_CONFIG ~/.config/starship/starship.toml
+set -gx GTK_IM_MODULE fcitx
+set -gx QT_IM_MODULE fcitx
+set -gx XMODIFIERS @im fcitx
 
 # add path
 fish_add_path ~/.local/bin
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-if test -f $HOME/miniconda3/bin/conda
-	eval $HOME/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+if test -f /home/noah/miniconda3/bin/conda
+    eval /home/noah/miniconda3/bin/conda "shell.fish" hook $argv | source
 else
-	if test -f "$HOME/miniconda3/etc/fish/conf.d/conda.fish"
-		. "$HOME/miniconda3/etc/fish/conf.d/conda.fish"
-	else
-		set -x PATH "$HOME/miniconda3/bin" $PATH
-	end
+    if test -f "/home/noah/miniconda3/etc/fish/conf.d/conda.fish"
+        . "/home/noah/miniconda3/etc/fish/conf.d/conda.fish"
+    else
+        set -x PATH /home/noah/miniconda3/bin $PATH
+    end
 end
 # <<< conda initialize <<<
