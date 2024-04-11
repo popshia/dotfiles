@@ -11,7 +11,7 @@ fzf_configure_bindings --history=\cr --directory=\cf --git_log=\cg --git_status=
 
 # fzf configurations
 set fzf_preview_dir_cmd eza --grid --icons $argv
-set fzf_directory_opts --bind "L:execute(nvim {} &> /dev/tty)"
+set fzf_directory_opts --bind "ctrl-o:execute(nvim {} &> /dev/tty)"
 
 # set variables
 set -gx LC_ALL C.UTF-8
