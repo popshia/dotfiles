@@ -51,5 +51,49 @@ Temporary Items
 
 # End of https://www.toptal.com/developers/gitignore/api/linux
 
-### What I want to ignore ###
+# fish variables
 fish/.config/fish/fish_variables
+# fish plugin functions
+fish/.config/fish/functions/__git.branch_has_wip.fish
+fish/.config/fish/functions/__git.current_branch.fish
+fish/.config/fish/functions/__git.default_branch.fish
+fish/.config/fish/functions/__git.destroy.fish
+fish/.config/fish/functions/__git.init.fish
+fish/.config/fish/functions/gbage.fish
+fish/.config/fish/functions/gbda.fish
+fish/.config/fish/functions/gdv.fish
+fish/.config/fish/functions/gignored.fish
+fish/.config/fish/functions/glp.fish
+fish/.config/fish/functions/grename.fish
+fish/.config/fish/functions/grt.fish
+fish/.config/fish/functions/gtest.fish
+fish/.config/fish/functions/gtl.fish
+fish/.config/fish/functions/gunwip.fish
+fish/.config/fish/functions/gwip.fish
+fish/.config/fish/conf.d/git.fish
+fish/.config/fish/functions/_fzf_configure_bindings_help.fish
+fish/.config/fish/functions/_fzf_extract_var_info.fish
+fish/.config/fish/functions/_fzf_preview_changed_file.fish
+fish/.config/fish/functions/_fzf_preview_file.fish
+fish/.config/fish/functions/_fzf_report_diff_type.fish
+fish/.config/fish/functions/_fzf_report_file_type.fish
+fish/.config/fish/functions/_fzf_search_directory.fish
+fish/.config/fish/functions/_fzf_search_git_log.fish
+fish/.config/fish/functions/_fzf_search_git_status.fish
+fish/.config/fish/functions/_fzf_search_history.fish
+fish/.config/fish/functions/_fzf_search_processes.fish
+fish/.config/fish/functions/_fzf_search_variables.fish
+fish/.config/fish/functions/_fzf_wrapper.fish
+fish/.config/fish/functions/fzf_configure_bindings.fish
+fish/.config/fish/conf.d/fzf.fish
+fish/.config/fish/completions/fzf_configure_bindings.fish
+fish/.config/fish/functions/_puffer_fish_expand_bang.fish
+fish/.config/fish/functions/_puffer_fish_expand_dots.fish
+fish/.config/fish/functions/_puffer_fish_expand_lastarg.fish
+fish/.config/fish/conf.d/puffer_fish_key_bindings.fish
+fish/.config/fish/functions/_autopair_backspace.fish
+fish/.config/fish/functions/_autopair_insert_left.fish
+fish/.config/fish/functions/_autopair_insert_right.fish
+fish/.config/fish/functions/_autopair_insert_same.fish
+fish/.config/fish/functions/_autopair_tab.fish
+fish/.config/fish/conf.d/autopair.fish
