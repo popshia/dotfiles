@@ -1,3 +1,3 @@
 function mv
-	$HOME/repos/advcpmv/advmv -g $argv
+    $HOME/repos/dotfiles/utils/packages/advcpmv/advmv -g $argv
 end
