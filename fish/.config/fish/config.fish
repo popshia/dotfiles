@@ -7,7 +7,7 @@ zoxide init fish | source
 
 # fzf keybindings
 fish_vi_key_bindings
-fzf_configure_bindings --history=\cr --directory=\cf --git_log=\cg --git_status=\cs --processes=\cp
+fzf_configure_bindings --history=\cr --directory=\cf --git_log=\cg --git_status=\cs --processes=
 
 # fzf configurations
 set fzf_preview_dir_cmd eza --grid --icons $argv
