@@ -1,3 +1,3 @@
 function cp
-    $HOME/repos/dotfiles/utils/packages/advcpmv/advcp -g $argv
+    $HOME/repos/advcpmv/advcp -g $argv
 end
