@@ -53,6 +53,7 @@ Temporary Items
 
 # fish variables
 fish/.config/fish/fish_variables
+
 # fish plugin functions
 fish/.config/fish/functions/__git.branch_has_wip.fish
 fish/.config/fish/functions/__git.current_branch.fish
@@ -70,7 +71,6 @@ fish/.config/fish/functions/gtest.fish
 fish/.config/fish/functions/gtl.fish
 fish/.config/fish/functions/gunwip.fish
 fish/.config/fish/functions/gwip.fish
-fish/.config/fish/conf.d/git.fish
 fish/.config/fish/functions/_fzf_configure_bindings_help.fish
 fish/.config/fish/functions/_fzf_extract_var_info.fish
 fish/.config/fish/functions/_fzf_preview_changed_file.fish
@@ -85,15 +85,15 @@ fish/.config/fish/functions/_fzf_search_processes.fish
 fish/.config/fish/functions/_fzf_search_variables.fish
 fish/.config/fish/functions/_fzf_wrapper.fish
 fish/.config/fish/functions/fzf_configure_bindings.fish
-fish/.config/fish/conf.d/fzf.fish
-fish/.config/fish/completions/fzf_configure_bindings.fish
 fish/.config/fish/functions/_puffer_fish_expand_bang.fish
 fish/.config/fish/functions/_puffer_fish_expand_dots.fish
 fish/.config/fish/functions/_puffer_fish_expand_lastarg.fish
-fish/.config/fish/conf.d/puffer_fish_key_bindings.fish
 fish/.config/fish/functions/_autopair_backspace.fish
 fish/.config/fish/functions/_autopair_insert_left.fish
 fish/.config/fish/functions/_autopair_insert_right.fish
 fish/.config/fish/functions/_autopair_insert_same.fish
 fish/.config/fish/functions/_autopair_tab.fish
-fish/.config/fish/conf.d/autopair.fish
+
+# fish conf and completions
+fish/.config/fish/conf.d/*
+fish/.config/fish/completions/*

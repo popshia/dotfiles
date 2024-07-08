@@ -28,16 +28,3 @@ set -gx XMODIFIERS @im fcitx
 
 # add path
 fish_add_path ~/.local/bin
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-if test -f /home/noah/miniconda3/bin/conda
-    eval /home/noah/miniconda3/bin/conda "shell.fish" hook $argv | source
-else
-    if test -f "/home/noah/miniconda3/etc/fish/conf.d/conda.fish"
-        . "/home/noah/miniconda3/etc/fish/conf.d/conda.fish"
-    else
-        set -x PATH /home/noah/miniconda3/bin $PATH
-    end
-end
-# <<< conda initialize <<<

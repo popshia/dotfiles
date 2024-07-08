@@ -1,3 +1,3 @@
 function jvim
-    NVIM_APPNAME=nvim_junwei vim $argv
+    NVIM_APPNAME=jvim vim $argv
 end
