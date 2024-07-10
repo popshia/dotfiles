@@ -14,17 +14,22 @@ set fzf_preview_dir_cmd eza --grid --icons $argv
 set fzf_directory_opts --bind "ctrl-o:execute(nvim {} &> /dev/tty)"
 
 # set variables
-set -gx LC_ALL C.UTF-8
-set -gx LANG C.UTF-8
 set -gx BAT_THEME ansi
 set -gx LS_COLORS (vivid generate gruvbox-dark)
 set -gx EDITOR (which nvim)
 set -gx VISUAL $EDITOR
-set -gx SUDO_EDITOR $EDITOR
 set -gx STARSHIP_CONFIG ~/.config/starship/starship.toml
-set -gx GTK_IM_MODULE fcitx
-set -gx QT_IM_MODULE fcitx
-set -gx XMODIFIERS @im fcitx
 
-# add path
-fish_add_path ~/.local/bin
+# os specific configs
+switch (uname)
+    case Darwin
+        eval "$(/opt/homebrew/bin/brew shellenv)"
+    case Linux
+        set -gx LC_ALL C.UTF-8
+        set -gx LANG C.UTF-8
+        set -gx SUDO_EDITOR $EDITOR
+        set -gx GTK_IM_MODULE fcitx
+        set -gx QT_IM_MODULE fcitx
+        set -gx XMODIFIERS @im fcitx
+        fish_add_path ~/.local/bin
+end
