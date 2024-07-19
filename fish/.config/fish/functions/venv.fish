@@ -1,3 +1,3 @@
 function venv -d "create python venv"
-    uv venv
+    uv venv $argv
 end
