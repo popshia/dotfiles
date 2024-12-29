@@ -24,6 +24,15 @@ set -gx STARSHIP_CONFIG ~/.config/starship/starship.toml
 switch (uname)
     case Darwin
         eval "$(/opt/homebrew/bin/brew shellenv)"
+        if test -f /opt/homebrew/Caskroom/miniconda/base/bin/conda
+            eval /opt/homebrew/Caskroom/miniconda/base/bin/conda "shell.fish" hook $argv | source
+        else
+            if test -f "/opt/homebrew/Caskroom/miniconda/base/etc/fish/conf.d/conda.fish"
+                . "/opt/homebrew/Caskroom/miniconda/base/etc/fish/conf.d/conda.fish"
+            else
+                set -x PATH /opt/homebrew/Caskroom/miniconda/base/bin $PATH
+            end
+        end
     case Linux
         set -gx LC_ALL C.UTF-8
         set -gx LANG C.UTF-8
