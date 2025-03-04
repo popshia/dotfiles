@@ -1,0 +1,44 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "assistant": {
+    "default_model": {
+      "provider": "google",
+      "model": "gemini-2.0-pro-exp"
+    },
+    "version": "2"
+  },
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Gruvbox Dark Hard"
+  },
+  "features": {
+    "edit_prediction_provider": "zed"
+    // "edit_prediction_provider": "copilot"
+  },
+  "tabs": {
+    "file_icons": true,
+    "git_status": true
+  },
+  "indent_guides": {
+    "coloring": "fixed", // indent_aware
+    "background_coloring": "indent_aware" // disabled
+  },
+  "inlay_hints": {
+    "enabled": true
+  },
+  "restore_on_startup": "last_session",
+  "show_completions_on_input": true,
+  "vim_mode": true,
+  "ui_font_size": 18,
+  "buffer_font_size": 16,
+  "buffer_font_family": "MonoLisaStatic Nerd Font",
+  "relative_line_numbers": true
+}
