@@ -269,3 +269,10 @@ fish/.config/fish/functions/_autopair_tab.fish
 # fish conf and completions
 fish/.config/fish/conf.d/*
 fish/.config/fish/completions/*
+
+# zed
+zed/.config/zed/conversations/
+zed/.config/zed/prompts/
+
+# karabiner
+karabiner/.config/karabiner/automatic_backups/
