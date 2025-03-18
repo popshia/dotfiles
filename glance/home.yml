@@ -1,0 +1,138 @@
+- name: Home
+  # Optionally, if you only have a single page you can hide the desktop navigation for a cleaner look
+  hide-desktop-navigation: true
+  columns:
+    - size: small
+      widgets:
+        - type: weather
+          location: Zhongli District, Taiwan
+          units: metric # alternatively "imperial"
+          hour-format: 24h # alternatively "24h"
+          # hide-location: true
+
+        - type: calendar
+          first-day-of-week: sunday
+
+        - type: markets
+          sort-by: change
+          chart-link-template: https://www.tradingview.com/chart/?symbol={SYMBOL}
+          symbol-link-template: https://www.google.com/search?tbm=nws&q={SYMBOL}
+          markets:
+            - symbol: NVDA
+              name: NVIDIA
+            - symbol: AAPL
+              name: Apple
+            - symbol: TSM
+              name: TSMC
+            - symbol: AMD
+              name: AMD
+            - symbol: GOOGL
+              name: Google
+            - symbol: META
+              name: Meta
+            - symbol: MSFT
+              name: Microsoft
+
+    - size: full
+      widgets:
+        - type: group
+          widgets:
+            - type: rss
+              title: RSS
+              style: vertical-list
+              feeds:
+                - url: https://9to5mac.com/feed/
+                  title: 9to5Mac
+                - url: https://www.theverge.com/rss/index.xml
+                  title: The Verge
+                - url: https://www.404media.co/rss/
+                  title: 404 Media
+                - url: https://9to5google.com/feed/
+                  title: 9to5Google
+            - type: hacker-news
+            - type: lobsters
+
+        - type: group
+          widgets:
+            - type: reddit
+              subreddit: neovim
+            - type: reddit
+              subreddit: iOSBeta
+            - type: reddit
+              subreddit: MacOSBeta
+            - type: reddit
+              subreddit: ProgrammerHumor
+            - type: reddit
+              subreddit: apple
+            - type: reddit
+              subreddit: Technology
+            - type: reddit
+              subreddit: CustomKeyboard
+            - type: reddit
+              subreddit: MechanicalKeyboard
+
+        - type: videos
+          style: vertical-list
+          channels:
+            - UCRdJzOsu4MwKmY04vfAIDHw # NL
+            - UCBJycsmduvYEL83R_U4JriQ # Marques Brownlee
+            - UCJprx3bX49vNl6Bcw01Cwfg # T1
+            - UCEcrRXW3oEYfUctetZTAWLw # WVFRM
+            - UCG7J20LhUeLl6y_Emi7OJrA # The Studio
+            - UCm4cFzs3Iotlu27fOP_KwlA # FMS
+            - UC9ENSXGz5VofN9GC9HUbj8Q # Adrien Sanguinetti
+            - UCsBjURrPoezykLs9EqgamOA # Fireship
+
+    - size: small
+      widgets:
+        - type: bookmarks
+          groups:
+          - title: Productivity
+            color: 43 50 70
+            links:
+              - title: Gmail
+                icon: si:gmail
+                url: https://mail.google.com/mail/u/0/
+              - title: Github
+                icon: si:github
+                url: https://github.com/
+          - title: Entertainment
+            color: 10 70 50
+            links:
+              - title: YouTube
+                icon: si:youtube
+                url: https://www.youtube.com/
+              - title: Chillhop radio
+                icon: si:kofi
+                url: https://chillhop.com/radio/#
+          - title: Social
+            color: 200 50 50
+            links:
+              - title: Threads
+                icon: si:threads
+                url: https://www.threads.net/
+              - title: Instagram
+                icon: si:instagram
+                url: https://www.instagram.com/
+              - title: Bluesky
+                icon: si:bluesky
+                url: https://bsky.app/
+
+        - type: twitch-channels
+          channels:
+            - never_loses
+            - greentea
+            - roger9527
+            - bebelolz
+            - lolesportstw
+            - LCK_Carry
+            - theprimeagen
+            - teej_dv
+
+        - type: releases
+          cache: 1d
+          token: ${GITHUB_TOKEN}
+          repositories:
+            - glanceapp/glance
+            - neovim/neovim
+            - zed-industries/zed
