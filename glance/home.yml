@@ -1,6 +1,7 @@
 - name: Home
   # Optionally, if you only have a single page you can hide the desktop navigation for a cleaner look
   hide-desktop-navigation: true
+  show-mobile-header: true
   columns:
     - size: small
       widgets:
@@ -14,24 +15,37 @@
           first-day-of-week: sunday
 
         - type: markets
-          sort-by: change
           chart-link-template: https://www.tradingview.com/chart/?symbol={SYMBOL}
           symbol-link-template: https://www.google.com/search?tbm=nws&q={SYMBOL}
           markets:
-            - symbol: NVDA
-              name: NVIDIA
             - symbol: AAPL
               name: Apple
+            - symbol: NVDA
+              name: NVIDIA
             - symbol: TSM
               name: TSMC
-            - symbol: AMD
-              name: AMD
             - symbol: GOOGL
               name: Google
+            - symbol: AMD
+              name: AMD
             - symbol: META
               name: Meta
             - symbol: MSFT
               name: Microsoft
+            - symbol: QCOM
+              name: Qualcom
+            - symbol: TSLA
+              name: Tesla
+            - symbol: AMZN
+              name: Amazon
+            - symbol: INTL
+              name: Intel
+            - symbol: SPY
+              name: S&P 500
+            - symbol: ^DJI
+              name: Dow Jones
+            - symbol: QQQ
+              name: QQQ
 
     - size: full
       widgets:
@@ -69,10 +83,10 @@
             - type: reddit
               subreddit: CustomKeyboard
             - type: reddit
-              subreddit: MechanicalKeyboard
+              subreddit: MechanicalKeyboards
 
         - type: videos
-          style: vertical-list
+          style: grid-cards
           channels:
             - UCRdJzOsu4MwKmY04vfAIDHw # NL
             - UCBJycsmduvYEL83R_U4JriQ # Marques Brownlee
@@ -82,6 +96,11 @@
             - UCm4cFzs3Iotlu27fOP_KwlA # FMS
             - UC9ENSXGz5VofN9GC9HUbj8Q # Adrien Sanguinetti
             - UCsBjURrPoezykLs9EqgamOA # Fireship
+            - UCUyeluBRhGPCW4rPe_UvBZQ # ThePrimeagen
+            - UCd3dNckv1Za2coSaHGHl5aA # TJ DeVries
+            - UCNkJevYXQcjTc70j45FXFjA # Cielo
+            - UCNooNOGnABoxyDwHuQAH92w # 最強聯盟
+
 
     - size: small
       widgets:
@@ -92,31 +111,38 @@
             links:
               - title: Gmail
                 icon: si:gmail
+                same-link: false
                 url: https://mail.google.com/mail/u/0/
               - title: Github
                 icon: si:github
                 url: https://github.com/
+                same-link: false
           - title: Entertainment
             color: 10 70 50
             links:
               - title: YouTube
                 icon: si:youtube
                 url: https://www.youtube.com/
+                same-link: false
               - title: Chillhop radio
                 icon: si:kofi
                 url: https://chillhop.com/radio/#
+                same-link: false
           - title: Social
             color: 200 50 50
             links:
               - title: Threads
                 icon: si:threads
                 url: https://www.threads.net/
+                same-link: false
               - title: Instagram
                 icon: si:instagram
                 url: https://www.instagram.com/
+                same-link: false
               - title: Bluesky
                 icon: si:bluesky
                 url: https://bsky.app/
+                same-link: false
 
         - type: twitch-channels
           channels:
@@ -136,3 +162,9 @@
             - glanceapp/glance
             - neovim/neovim
             - zed-industries/zed
+            - mikker/LeaderKey.app
+            - rxhanson/rectangle
+            - kovidgoyal/kitty
+            - Ranchero-Software/NetNewsWire
+            - penpot/penpot
+
