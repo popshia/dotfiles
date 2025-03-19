@@ -69,24 +69,34 @@
         - type: group
           widgets:
             - type: reddit
+              show-thumbnails: true
               subreddit: neovim
             - type: reddit
+              show-thumbnails: true
               subreddit: iOSBeta
             - type: reddit
+              show-thumbnails: true
               subreddit: MacOSBeta
             - type: reddit
+              show-thumbnails: true
               subreddit: ProgrammerHumor
             - type: reddit
+              show-thumbnails: true
               subreddit: apple
             - type: reddit
+              show-thumbnails: true
               subreddit: Technology
             - type: reddit
+              show-thumbnails: true
               subreddit: CustomKeyboard
             - type: reddit
+              show-thumbnails: true
               subreddit: MechanicalKeyboards
 
         - type: videos
           style: grid-cards
+          collapse-after-rows: 3
+          limit: 52
           channels:
             - UCRdJzOsu4MwKmY04vfAIDHw # NL
             - UCBJycsmduvYEL83R_U4JriQ # Marques Brownlee
@@ -115,19 +125,43 @@
                 url: https://mail.google.com/mail/u/0/
               - title: Github
                 icon: si:github
-                url: https://github.com/
                 same-link: false
+                url: https://github.com/
+              - title: Figma
+                icon: si:figma
+                same-link: false
+                url: https://www.figma.com
+              - title: Penpot
+                icon: si:penpot
+                same-link: false
+                url: http://localhost:9001/
+              - title: iCloud
+                icon: si:icloud
+                same-link: false
+                url: https://beta.icloud.com
+              - title: Google Drive
+                icon: si:googledrive
+                same-link: false
+                url: https://drive.google.com/drive/u/0/my-drive
           - title: Entertainment
             color: 10 70 50
             links:
               - title: YouTube
                 icon: si:youtube
-                url: https://www.youtube.com/
                 same-link: false
+                url: https://www.youtube.com/
               - title: Chillhop radio
                 icon: si:kofi
-                url: https://chillhop.com/radio/#
                 same-link: false
+                url: https://chillhop.com/radio/#
+              - title: Monkeytype
+                icon: si:monkeytype
+                same-link: false
+                url: https://monkeytype.com
+              - title: WVFRM
+                icon: si:applepodcasts
+                same-link: false
+                url: https://www.wvfrmtrivia.com
           - title: Social
             color: 200 50 50
             links:
@@ -145,6 +179,7 @@
                 same-link: false
 
         - type: twitch-channels
+          collapse-after: 8
           channels:
             - never_loses
             - greentea
@@ -167,4 +202,5 @@
             - kovidgoyal/kitty
             - Ranchero-Software/NetNewsWire
             - penpot/penpot
+            - Saghen/blink.cmp
 
