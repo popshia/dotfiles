@@ -34,6 +34,9 @@
   "inlay_hints": {
     "enabled": true
   },
+  "edit_predictions": {
+    "mode": "subtle"
+  },
   "restore_on_startup": "last_session",
   "show_completions_on_input": true,
   "vim_mode": true,
