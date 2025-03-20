@@ -1,7 +1,6 @@
 - name: Home
   # Optionally, if you only have a single page you can hide the desktop navigation for a cleaner look
   hide-desktop-navigation: true
-  show-mobile-header: true
   columns:
     - size: small
       widgets:
@@ -47,22 +46,35 @@
             - symbol: QQQ
               name: QQQ
 
+        - type: server-stats
+          servers:
+            - type: local
+              name: Glance
+
     - size: full
       widgets:
         - type: group
           widgets:
             - type: rss
-              title: RSS
+              title: 9to5mac
               style: vertical-list
               feeds:
                 - url: https://9to5mac.com/feed/
-                  title: 9to5Mac
+            - type: rss
+              title: The Verge
+              style: vertical-list
+              feeds:
                 - url: https://www.theverge.com/rss/index.xml
-                  title: The Verge
+            - type: rss
+              title: 404 Media
+              style: vertical-list
+              feeds:
                 - url: https://www.404media.co/rss/
-                  title: 404 Media
+            - type: rss
+              title: 9to5Google
+              style: vertical-list
+              feeds:
                 - url: https://9to5google.com/feed/
-                  title: 9to5Google
             - type: hacker-news
             - type: lobsters
 
@@ -95,7 +107,6 @@
 
         - type: videos
           style: grid-cards
-          collapse-after-rows: 3
           limit: 52
           channels:
             - UCRdJzOsu4MwKmY04vfAIDHw # NL
@@ -111,72 +122,71 @@
             - UCNkJevYXQcjTc70j45FXFjA # Cielo
             - UCNooNOGnABoxyDwHuQAH92w # 最強聯盟
 
-
     - size: small
       widgets:
         - type: bookmarks
           groups:
-          - title: Productivity
-            color: 43 50 70
-            links:
-              - title: Gmail
-                icon: si:gmail
-                same-link: false
-                url: https://mail.google.com/mail/u/0/
-              - title: Github
-                icon: si:github
-                same-link: false
-                url: https://github.com/
-              - title: Figma
-                icon: si:figma
-                same-link: false
-                url: https://www.figma.com
-              - title: Penpot
-                icon: si:penpot
-                same-link: false
-                url: http://localhost:9001/
-              - title: iCloud
-                icon: si:icloud
-                same-link: false
-                url: https://beta.icloud.com
-              - title: Google Drive
-                icon: si:googledrive
-                same-link: false
-                url: https://drive.google.com/drive/u/0/my-drive
-          - title: Entertainment
-            color: 10 70 50
-            links:
-              - title: YouTube
-                icon: si:youtube
-                same-link: false
-                url: https://www.youtube.com/
-              - title: Chillhop radio
-                icon: si:kofi
-                same-link: false
-                url: https://chillhop.com/radio/#
-              - title: Monkeytype
-                icon: si:monkeytype
-                same-link: false
-                url: https://monkeytype.com
-              - title: WVFRM
-                icon: si:applepodcasts
-                same-link: false
-                url: https://www.wvfrmtrivia.com
-          - title: Social
-            color: 200 50 50
-            links:
-              - title: Threads
-                icon: si:threads
-                url: https://www.threads.net/
-                same-link: false
-              - title: Instagram
-                icon: si:instagram
-                url: https://www.instagram.com/
-                same-link: false
-              - title: Bluesky
-                icon: si:bluesky
-                url: https://bsky.app/
-                same-link: false
+            - title: Productivity
+              color: 43 50 70
+              links:
+                - title: Github
+                  icon: si:github
+                  same-link: false
+                  url: https://github.com/
+                - title: Gmail
+                  icon: si:gmail
+                  same-link: false
+                  url: https://mail.google.com/mail/u/0/
+                - title: Figma
+                  icon: si:figma
+                  same-link: false
+                  url: https://www.figma.com
+                - title: Penpot
+                  icon: si:penpot
+                  same-link: false
+                  url: http://localhost:9001/
+                - title: iCloud
+                  icon: si:icloud
+                  same-link: false
+                  url: https://beta.icloud.com
+                - title: Google Drive
+                  icon: si:googledrive
+                  same-link: false
+                  url: https://drive.google.com/drive/u/0/my-drive
+            - title: Entertainment
+              color: 10 70 50
+              links:
+                - title: YouTube
+                  icon: si:youtube
+                  same-link: false
+                  url: https://www.youtube.com/
+                - title: Chillhop radio
+                  icon: si:kofi
+                  same-link: false
+                  url: https://chillhop.com/radio/#
+                - title: Monkeytype
+                  icon: si:monkeytype
+                  same-link: false
+                  url: https://monkeytype.com
+                - title: WVFRM
+                  icon: si:applepodcasts
+                  same-link: false
+                  url: https://www.wvfrmtrivia.com
+            - title: Social
+              color: 200 50 50
+              links:
+                - title: Threads
+                  icon: si:threads
+                  url: https://www.threads.net/
+                  same-link: false
+                - title: Instagram
+                  icon: si:instagram
+                  url: https://www.instagram.com/
+                  same-link: false
+                - title: Bluesky
+                  icon: si:bluesky
+                  url: https://bsky.app/
+                  same-link: false
 
         - type: twitch-channels
           collapse-after: 8
@@ -203,4 +213,5 @@
             - Ranchero-Software/NetNewsWire
             - penpot/penpot
             - Saghen/blink.cmp
-
+            - jordanbaird/ice
+            - zen-browser/desktop
