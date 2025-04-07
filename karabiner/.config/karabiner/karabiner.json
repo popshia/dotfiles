@@ -5,25 +5,26 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Akimbo cmd to F12",
+                        "description": "Press left_control to esc, hold to control.",
                         "enabled": false,
                         "manipulators": [
                             {
                                 "from": {
-                                    "simultaneous": [
-                                        { "key_code": "left_command" },
-                                        { "key_code": "right_command" }
-                                    ],
-                                    "simultaneous_options": {
-                                        "to_after_key_up": [
-                                            {
-                                                "key_code": "f12",
-                                                "modifiers": ["fn"]
-                                            }
-                                        ]
-                                    }
+                                    "key_code": "left_control",
+                                    "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "key_code": "vk_none" }],
+                                "parameters": {
+                                    "basic.to_if_alone_timeout_milliseconds": 50,
+                                    "basic.to_if_held_down_threshold_milliseconds": 50
+                                },
+                                "to_delayed_action": { "to_if_canceled": [{ "key_code": "left_control" }] },
+                                "to_if_alone": [
+                                    {
+                                        "halt": true,
+                                        "key_code": "escape"
+                                    }
+                                ],
+                                "to_if_held_down": [{ "key_code": "left_control" }],
                                 "type": "basic"
                             }
                         ]
