@@ -11,7 +11,7 @@
   "assistant": {
     "default_model": {
       "provider": "google",
-      "model": "gemini-2.0-pro-exp"
+      "model": "gemini-2.0-flash-thinking-exp"
     },
     "version": "2"
   },
@@ -43,5 +43,6 @@
   "ui_font_size": 18,
   "buffer_font_size": 16,
   "buffer_font_family": "MonoLisaStatic Nerd Font",
-  "relative_line_numbers": true
+  "relative_line_numbers": true,
+  "hide_mouse_while_typing": true
 }

@@ -1,0 +1,74 @@
+{
+  "actions": [
+    {
+      "actions": [
+        {
+          "key": "l",
+          "label": "",
+          "type": "application",
+          "value": "/Applications/LINE.app"
+        },
+        {
+          "key": "t",
+          "label": "",
+          "type": "application",
+          "value": "/Applications/Telegram.app"
+        },
+        {
+          "key": "s",
+          "label": "",
+          "type": "application",
+          "value": "/Applications/Spotify.app"
+        },
+        {
+          "key": "f",
+          "label": "",
+          "type": "application",
+          "value": "/Applications/Figma Beta.app"
+        },
+        {
+          "key": "m",
+          "label": "",
+          "type": "application",
+          "value": "/System/Applications/Mail.app"
+        },
+        {
+          "key": "p",
+          "label": "",
+          "type": "application",
+          "value": "/System/Applications/Podcasts.app"
+        },
+        {
+          "key": "z",
+          "label": "",
+          "type": "application",
+          "value": "/Applications/Zed.app"
+        },
+        {
+          "key": "d",
+          "label": "",
+          "type": "application",
+          "value": "/Applications/Discord.app"
+        }
+      ],
+      "key": "o",
+      "label": "Open",
+      "type": "group"
+    },
+    {
+      "actions": [
+        {
+          "key": "k",
+          "label": "Lock Screen",
+          "type": "url",
+          "value": "raycast://extensions/raycast/system/lock-screen"
+        }
+      ],
+      "key": "a",
+      "label": "Actions",
+      "type": "group"
+    }
+  ],
+  "type": "group"
+}
+
