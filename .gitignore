@@ -265,6 +265,11 @@ fish/.config/fish/functions/_autopair_insert_left.fish
 fish/.config/fish/functions/_autopair_insert_right.fish
 fish/.config/fish/functions/_autopair_insert_same.fish
 fish/.config/fish/functions/_autopair_tab.fish
+fish/.config/fish/functions/_nvm_index_update.fish
+fish/.config/fish/functions/_nvm_list.fish
+fish/.config/fish/functions/_nvm_version_activate.fish
+fish/.config/fish/functions/_nvm_version_deactivate.fish
+fish/.config/fish/functions/nvm.fish
 
 # fish conf and completions
 fish/.config/fish/conf.d/*
