@@ -19,20 +19,14 @@ set -gx LS_COLORS (vivid generate gruvbox-dark)
 set -gx EDITOR (which nvim)
 set -gx VISUAL $EDITOR
 set -gx STARSHIP_CONFIG ~/.config/starship/starship.toml
+abbr -a vim nvim
 
 # os specific configs
 switch (uname)
     case Darwin
-        eval "$(/opt/homebrew/bin/brew shellenv)"
-        if test -f /opt/homebrew/Caskroom/miniconda/base/bin/conda
-            eval /opt/homebrew/Caskroom/miniconda/base/bin/conda "shell.fish" hook $argv | source
-        else
-            if test -f "/opt/homebrew/Caskroom/miniconda/base/etc/fish/conf.d/conda.fish"
-                . "/opt/homebrew/Caskroom/miniconda/base/etc/fish/conf.d/conda.fish"
-            else
-                set -x PATH /opt/homebrew/Caskroom/miniconda/base/bin $PATH
-            end
-        end
+        # Added by OrbStack: command-line tools and integration
+        # This won't be added again if you remove it.
+        source ~/.orbstack/shell/init2.fish 2>/dev/null || :
     case Linux
         set -gx LC_ALL C.UTF-8
         set -gx LANG C.UTF-8
@@ -43,8 +37,6 @@ switch (uname)
         fish_add_path ~/.local/bin
 end
 
-# Added by OrbStack: command-line tools and integration
-# This won't be added again if you remove it.
-source ~/.orbstack/shell/init2.fish 2>/dev/null || :
-
-pokemon-colorscripts -r
+if status --is-interactive
+    pokemon-colorscripts -r
+end
