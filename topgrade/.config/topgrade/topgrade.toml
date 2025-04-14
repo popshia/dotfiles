@@ -200,6 +200,7 @@ autoremove = true
 repos = [
 	"~/.config/nvim",
 	"~/repos/dotfiles",
+	"~/Calibre Library"
 ]
 
 # Don't pull the predefined git repos
