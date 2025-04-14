@@ -18,38 +18,25 @@
           symbol-link-template: https://www.google.com/search?tbm=nws&q={SYMBOL}
           markets:
             - symbol: AAPL
-              name: Apple
             - symbol: NVDA
-              name: NVIDIA
             - symbol: TSM
-              name: TSMC
-            - symbol: GOOGL
-              name: Google
-            - symbol: AMD
-              name: AMD
             - symbol: META
-              name: Meta
+            - symbol: GOOGL
             - symbol: MSFT
-              name: Microsoft
-            - symbol: QCOM
-              name: Qualcom
             - symbol: TSLA
-              name: Tesla
             - symbol: AMZN
-              name: Amazon
+            - symbol: DIS
+            - symbol: NFLX
+            - symbol: AMD
+            - symbol: ARM
+            - symbol: QCOM
             - symbol: INTL
-              name: Intel
-            - symbol: SPY
-              name: S&P 500
-            - symbol: ^DJI
-              name: Dow Jones
-            - symbol: QQQ
-              name: QQQ
-
-        - type: server-stats
-          servers:
-            - type: local
-              name: Glance
+            - symbol: ASML
+            - symbol: SMCI
+            - symbol: 2330.TW
+            - symbol: 0050.TW
+            - symbol: 0056.TW
+            - symbol: 00878.TW
 
     - size: full
       widgets:
