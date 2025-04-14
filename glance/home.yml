@@ -190,7 +190,6 @@
 
         - type: releases
           cache: 1d
-          token: ${GITHUB_TOKEN}
           repositories:
             - glanceapp/glance
             - neovim/neovim
