@@ -19,7 +19,16 @@ set -gx LS_COLORS (vivid generate gruvbox-dark)
 set -gx EDITOR (which nvim)
 set -gx VISUAL $EDITOR
 set -gx STARSHIP_CONFIG ~/.config/starship/starship.toml
+
+# set abbreviations
 abbr -a vim nvim
+abbr -a lg lazygit
+abbr -a lr 'defaults write com.apple.dock ResetLaunchPad -bool true && killall Dock'
+abbr -a ld 'eza --only-dirs --icons'
+abbr -a lf 'eza --all --classify --only-files --icons'
+abbr -a ll 'eza --all --long --group-directories-first --git --icons'
+abbr -a ls 'eza --all --grid --group-directories-first --icons'
+abbr -a lt 'eza --tree --level=3 --icons --all --git-ignore'
 
 # os specific configs
 switch (uname)
