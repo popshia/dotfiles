@@ -45,56 +45,44 @@
             - type: rss
               title: 9to5mac
               style: vertical-list
+              collapse-after: 10
               feeds:
                 - url: https://9to5mac.com/feed/
+            - type: reddit
+              show-thumbnails: true
+              collapse-after: 10
+              subreddit: neovim
             - type: rss
               title: The Verge
               style: vertical-list
+              collapse-after: 10
               feeds:
                 - url: https://www.theverge.com/rss/index.xml
             - type: rss
               title: 404 Media
               style: vertical-list
+              collapse-after: 10
               feeds:
                 - url: https://www.404media.co/rss/
             - type: rss
               title: 9to5Google
               style: vertical-list
+              collapse-after: 10
               feeds:
                 - url: https://9to5google.com/feed/
             - type: hacker-news
+              collapse-after: 10
             - type: lobsters
-
-        - type: group
-          widgets:
+              collapse-after: 10
             - type: reddit
               show-thumbnails: true
-              subreddit: neovim
-            - type: reddit
-              show-thumbnails: true
-              subreddit: iOSBeta
-            - type: reddit
-              show-thumbnails: true
-              subreddit: MacOSBeta
-            - type: reddit
-              show-thumbnails: true
-              subreddit: ProgrammerHumor
-            - type: reddit
-              show-thumbnails: true
-              subreddit: apple
-            - type: reddit
-              show-thumbnails: true
+              collapse-after: 10
               subreddit: Technology
-            - type: reddit
-              show-thumbnails: true
-              subreddit: CustomKeyboard
-            - type: reddit
-              show-thumbnails: true
-              subreddit: MechanicalKeyboards
 
         - type: videos
           style: grid-cards
           limit: 52
+          collapse-after-rows: 6
           channels:
             - UCRdJzOsu4MwKmY04vfAIDHw # NL
             - UCBJycsmduvYEL83R_U4JriQ # Marques Brownlee
@@ -190,6 +178,7 @@
 
         - type: releases
           cache: 1d
+          collapse-after: 10
           repositories:
             - glanceapp/glance
             - neovim/neovim
