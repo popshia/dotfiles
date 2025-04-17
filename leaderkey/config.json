@@ -1,74 +1,81 @@
 {
-  "actions": [
+  "actions" : [
     {
-      "actions": [
+      "actions" : [
         {
-          "key": "l",
-          "label": "",
-          "type": "application",
-          "value": "/Applications/LINE.app"
+          "key" : "l",
+          "type" : "application",
+          "value" : "/Applications/LINE.app"
         },
         {
-          "key": "t",
-          "label": "",
-          "type": "application",
-          "value": "/Applications/Telegram.app"
+          "key" : "t",
+          "type" : "application",
+          "value" : "/Applications/Telegram.app"
         },
         {
-          "key": "s",
-          "label": "",
-          "type": "application",
-          "value": "/Applications/Spotify.app"
+          "key" : "s",
+          "type" : "application",
+          "value" : "/Applications/Spotify.app"
         },
         {
-          "key": "f",
-          "label": "",
-          "type": "application",
-          "value": "/Applications/Figma Beta.app"
+          "key" : "f",
+          "type" : "application",
+          "value" : "/Applications/Figma Beta.app"
         },
         {
-          "key": "m",
-          "label": "",
-          "type": "application",
-          "value": "/System/Applications/Mail.app"
+          "key" : "m",
+          "type" : "application",
+          "value" : "/System/Applications/Mail.app"
         },
         {
-          "key": "p",
-          "label": "",
-          "type": "application",
-          "value": "/System/Applications/Podcasts.app"
+          "key" : "p",
+          "type" : "application",
+          "value" : "/System/Applications/Podcasts.app"
         },
         {
-          "key": "z",
-          "label": "",
-          "type": "application",
-          "value": "/Applications/Zed.app"
+          "key" : "z",
+          "type" : "application",
+          "value" : "/Applications/Zed.app"
         },
         {
-          "key": "d",
-          "label": "",
-          "type": "application",
-          "value": "/Applications/Discord.app"
+          "key" : "d",
+          "type" : "application",
+          "value" : "/Applications/Discord.app"
+        },
+        {
+          "key" : "e",
+          "type" : "application",
+          "value" : "/System/Library/CoreServices/Finder.app"
+        },
+        {
+          "key" : "i",
+          "type" : "application",
+          "value" : "/System/Applications/iPhone Mirroring.app"
         }
       ],
-      "key": "o",
-      "label": "Open",
-      "type": "group"
+      "key" : "o",
+      "label" : "Open",
+      "type" : "group"
     },
     {
-      "actions": [
+      "actions" : [
         {
-          "key": "k",
-          "label": "Lock Screen",
-          "type": "url",
-          "value": "raycast://extensions/raycast/system/lock-screen"
+          "key" : "l",
+          "label" : "Lock Screen",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/system/lock-screen"
+        },
+        {
+          "key" : "r",
+          "label" : "Restart",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/system/restart"
         }
       ],
-      "key": "a",
-      "label": "Actions",
-      "type": "group"
+      "key" : "a",
+      "label" : "Actions",
+      "type" : "group"
     }
   ],
-  "type": "group"
+  "type" : "group"
 }
-
