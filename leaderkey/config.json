@@ -3,14 +3,19 @@
     {
       "actions" : [
         {
+          "key" : "l",
+          "type" : "application",
+          "value" : "/Applications/LINE.app"
+        },
+        {
           "key" : "t",
           "type" : "application",
           "value" : "/Applications/Telegram.app"
         },
         {
-          "key" : "l",
+          "key" : "s",
           "type" : "application",
-          "value" : "/Applications/LINE.app"
+          "value" : "/Applications/Spotify.app"
         },
         {
           "key" : "f",
@@ -18,9 +23,9 @@
           "value" : "/Applications/Figma Beta.app"
         },
         {
-          "key" : "s",
+          "key" : "m",
           "type" : "application",
-          "value" : "/Applications/Spotify.app"
+          "value" : "/System/Applications/Mail.app"
         },
         {
           "key" : "p",
@@ -33,14 +38,19 @@
           "value" : "/Applications/Zed.app"
         },
         {
-          "key" : "m",
+          "key" : "d",
           "type" : "application",
-          "value" : "/System/Applications/Mail.app"
+          "value" : "/Applications/Discord.app"
         },
         {
           "key" : "e",
           "type" : "application",
           "value" : "/System/Library/CoreServices/Finder.app"
+        },
+        {
+          "key" : "i",
+          "type" : "application",
+          "value" : "/System/Applications/iPhone Mirroring.app"
         },
         {
           "key" : "c",
@@ -49,7 +59,7 @@
         }
       ],
       "key" : "o",
-      "label" : "Open App",
+      "label" : "Open",
       "type" : "group"
     },
     {
@@ -59,6 +69,12 @@
           "label" : "Lock Screen",
           "type" : "url",
           "value" : "raycast://extensions/raycast/system/lock-screen"
+        },
+        {
+          "key" : "r",
+          "label" : "Restart",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/system/restart"
         }
       ],
       "key" : "a",

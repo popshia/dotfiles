@@ -23,6 +23,7 @@ set -gx STARSHIP_CONFIG ~/.config/starship/starship.toml
 # set abbreviations
 abbr -a vim nvim
 abbr -a lg lazygit
+abbr -a spt spotify_player
 abbr -a lr 'defaults write com.apple.dock ResetLaunchPad -bool true && killall Dock'
 abbr -a ld 'eza --only-dirs --icons'
 abbr -a lf 'eza --all --classify --only-files --icons'
