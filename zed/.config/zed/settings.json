@@ -40,9 +40,14 @@
   "restore_on_startup": "last_session",
   "show_completions_on_input": true,
   "vim_mode": true,
+  "vim": {
+    "use_system_clipboard": "always",
+    "use_multiline_find": true,
+    "use_smartcase_find": true,
+    "toggle_relative_line_numbers": true
+  },
   "ui_font_size": 18,
   "buffer_font_size": 16,
   "buffer_font_family": "MonoLisaStatic Nerd Font",
-  "relative_line_numbers": true,
-  "hide_mouse_while_typing": true
+  "hide_mouse": "on_typing_and_movement"
 }
