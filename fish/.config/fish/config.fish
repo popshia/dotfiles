@@ -25,11 +25,11 @@ abbr -a vim nvim
 abbr -a lg lazygit
 abbr -a spp spotify_player
 abbr -a lr 'defaults write com.apple.dock ResetLaunchPad -bool true && killall Dock'
-abbr -a ld 'eza --only-dirs --icons'
-abbr -a lf 'eza --all --classify --only-files --icons'
-abbr -a ll 'eza --all --long --group-directories-first --git --icons'
-abbr -a ls 'eza --all --grid --group-directories-first --icons'
-abbr -a lt 'eza --tree --level=3 --icons --all --git-ignore'
+abbr -a ld 'eza --only-dirs --icons always'
+abbr -a lf 'eza --all --classify --only-files --icons always'
+abbr -a ll 'eza --all --long --group-directories-first --git --icons always'
+abbr -a ls 'eza --all --grid --group-directories-first --icons always'
+abbr -a lt 'eza --tree --level=3 --icons always --all --git-ignore'
 
 # os specific configs
 switch (uname)
