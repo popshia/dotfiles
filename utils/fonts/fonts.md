@@ -1,12 +1,14 @@
 # Used fonts
 
-- Berkeley Mono
-- Cascaydia Mono
-- Fira Code
-- Hack Nerd
-- Input
-- Iosevka
-- Jetbrains
-- Maple Mono
+## free fonts
+- font-caskaydia-mono-nerd-font
+- font-fira-code-nerd-font
+- font-hack-nerd-font
+- font-input
+- font-iosevka-nerd-font
+- font-jetbrains-mono-nerd-font
+- font-maple-mono-nf-cn
+- font-zed-mono-nerd-font
+
+## paid fonts
 - Monolisa
-- Zed Mono
