@@ -108,7 +108,3 @@ For a more comprehensive setup, check the setup scripts in the `utils/setups/` d
 ## Customization
 
 Feel free to fork this repository and customize it to your needs. The modular structure makes it easy to add or remove configurations as needed.
-
-## License
-
-This project is open source and available under the MIT License.
