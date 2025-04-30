@@ -1,33 +1,114 @@
-# My dotfiles
+# Dotfiles
 
-![screen-shot](./screenshot.png) 
+A comprehensive collection of configuration files for my development environment across Linux and macOS systems.
 
-## Installing
+![Screenshot](./screenshot.png)
 
-You will need `git` and GNU `stow`
-Clone into your `$HOME` directory or `~`
-```bash
-git clone https://github.com/popshia/dotfiles ~
-```
-Run `stow` to symlink everything or just select what you want
-```bash
-stow --target=${HOME} */ # Everything (the '/' ignores the README)
-```
-or
-```bash
-stow --target=${HOME} fish # Just my fish config
-```
-## Stuffs I've been using
+## Overview
 
-- terminal: [kitty (minimum version 0.31.0)](https://github.com/kovidgoyal/kitty)
-- editor: [neovim (my nvim config repo)](https://github.com/popshia/nvim)
-- shell: [fish (minimum version: 3.4.0)](https://github.com/fish-shell/fish-shell)
-- shell prompt: [starship](https://github.com/starship/starship)
-- file browser: [ranger](https://github.com/ranger/ranger)
-- fuzzy finding: [fzf (minimum version: 0.33.0)](https://github.com/junegunn/fzf)
-- file finding: [fd (minimum version: 8.5.0)](https://github.com/sharkdp/fd)
-- file previewing: [bat (minimum version: 0.16.0)](https://github.com/sharkdp/bat)
-- activity monitor: [gotop](https://github.com/xxxserxxx/gotop)
-- font: [NerdFont (JetBrainsMono)](https://github.com/ryanoasis/nerd-fonts)
-- linux key-remapping: [xmodmap](https://wiki.archlinux.org/title/xmodmap)
-- mac keyboard shortcuts: [hammerspoon](https://github.com/Hammerspoon/hammerspoon)
+This repository contains my personal dotfiles for various tools and applications I use daily. It's organized to work with GNU Stow, which creates symlinks from this repository to your home directory, making it easy to manage and version control your configurations.
+
+## Features
+
+- Cross-platform support (Linux and macOS)
+- Modular organization with stow
+- Detailed setup instructions for different environments
+- Optimized configurations for terminal-based workflow
+- Keyboard-centric UI enhancements
+
+## Prerequisites
+
+- `git` for cloning the repository
+- GNU `stow` for creating symlinks
+- Recommended tools listed below (can be installed separately)
+
+## Installation
+
+### Basic Setup
+
+1. Clone this repository to your home directory:
+   ```bash
+   git clone https://github.com/popshia/dotfiles ~/.dotfiles
+   cd ~/.dotfiles
+   ```
+
+2. Use stow to symlink configurations:
+   ```bash
+   # Symlink everything (the '/' ignores the README and other non-config files)
+   stow --target=${HOME} */
+
+   # Or symlink specific configurations
+   stow --target=${HOME} fish kitty starship
+   ```
+
+### Automated Setup
+
+For a more comprehensive setup, check the setup scripts in the `utils/setups/` directory:
+- `linux_setup.md` - For Linux environments
+- `clink_linux_setup.md` - For C-Link Linux environments
+- Other platform-specific setups
+
+## Configuration Details
+
+### Shell Environment (Fish)
+- Modern shell with smart autocompletions
+- Custom prompt via Starship
+- Useful aliases and functions
+- Integration with tools like fzf, zoxide, and eza
+
+### Terminal (Kitty)
+- GPU-accelerated terminal emulator
+- Custom keybindings and themes
+- Split panes and tabs support
+
+### Editor
+- Neovim configuration available at [popshia/nvim](https://github.com/popshia/nvim)
+
+### Keyboard Customization
+- Linux: xmodmap and input-remapper
+- macOS: Hammerspoon and Karabiner
+- Windows: AutoHotkeys
+
+## Core Tools
+
+| Category | Tool | Description | Minimum Version |
+|----------|------|-------------|----------------|
+| Terminal | [kitty](https://github.com/kovidgoyal/kitty) | GPU-based terminal emulator | 0.31.0 |
+| Editor | [neovim](https://github.com/popshia/nvim) | Modern vim-based editor | - |
+| Shell | [fish](https://github.com/fish-shell/fish-shell) | User-friendly shell | 3.4.0 |
+| Shell Prompt | [starship](https://github.com/starship/starship) | Customizable prompt | - |
+| File Management | [ranger](https://github.com/ranger/ranger) | Terminal file browser | - |
+| File Management | [yazi](https://github.com/sxyazi/yazi) | Modern file manager | - |
+| Search | [fzf](https://github.com/junegunn/fzf) | Fuzzy finder | 0.33.0 |
+| Search | [fd](https://github.com/sharkdp/fd) | Alternative to `find` | 8.5.0 |
+| Viewing | [bat](https://github.com/sharkdp/bat) | Enhanced `cat` | 0.16.0 |
+| System | [gotop](https://github.com/xxxserxxx/gotop) | Terminal activity monitor | - |
+| Font | [JetBrainsMono Nerd Font](https://github.com/ryanoasis/nerd-fonts) | Patched font with icons | - |
+
+## Platform-Specific Tools
+
+### Linux
+- [xmodmap](https://wiki.archlinux.org/title/xmodmap) - Key remapping
+- [input-remapper](https://github.com/sezanzeb/input-remapper) - Input device remapping
+
+### macOS
+- [hammerspoon](https://github.com/Hammerspoon/hammerspoon) - Automation tool
+- [karabiner](https://github.com/pqrs-org/Karabiner-Elements) - Keyboard customization
+
+### Windows
+- [autohotkeys](https://www.autohotkey.com/) - Automation scripting
+
+## Additional Utilities
+- [zoxide](https://github.com/ajeetdsouza/zoxide) - Smarter cd command
+- [eza](https://github.com/eza-community/eza) - Modern ls replacement
+- [vivid](https://github.com/sharkdp/vivid) - LS_COLORS generator
+- [lazygit](https://github.com/jesseduffield/lazygit) - Terminal UI for git
+- [git-delta](https://github.com/dandavison/delta) - Better git diffs
+
+## Customization
+
+Feel free to fork this repository and customize it to your needs. The modular structure makes it easy to add or remove configurations as needed.
+
+## License
+
+This project is open source and available under the MIT License.
