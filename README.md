@@ -41,13 +41,6 @@ This repository contains my personal dotfiles for various tools and applications
    stow --target=${HOME} fish kitty starship
    ```
 
-### Automated Setup
-
-For a more comprehensive setup, check the setup scripts in the `utils/setups/` directory:
-- `linux_setup.md` - For Linux environments
-- `clink_linux_setup.md` - For C-Link Linux environments
-- Other platform-specific setups
-
 ## Configuration Details
 
 ### Shell Environment (Fish)
