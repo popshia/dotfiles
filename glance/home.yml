@@ -49,7 +49,7 @@
               feeds:
                 - url: https://9to5mac.com/feed/
             - type: reddit
-              show-thumbnails: true
+              show-thumbnails: false
               collapse-after: 10
               subreddit: neovim
             - type: rss
@@ -75,7 +75,7 @@
             - type: lobsters
               collapse-after: 10
             - type: reddit
-              show-thumbnails: true
+              show-thumbnails: false
               collapse-after: 10
               subreddit: Technology
 
@@ -98,6 +98,7 @@
             - UCNooNOGnABoxyDwHuQAH92w # 最強聯盟
             - UCxq6g8_zn2qdaLvTfHoW4jg # 上單老祖
             - UC_zQ777U6YTyatP3P1wi3xw # NeverTooSmall
+            - UCiEm9noegBIb-AzjqpxKffA # Roger
 
     - size: small
       widgets:
