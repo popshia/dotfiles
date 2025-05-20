@@ -68,6 +68,7 @@
                         ]
                     },
                     {
+                        "enabled": false,
                         "manipulators": [
                             {
                                 "description": "Change caps_lock to command+control+option+shift.",
