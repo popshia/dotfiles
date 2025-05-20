@@ -9,9 +9,10 @@
 {
   "icon_theme": "Zed (Default)",
   "assistant": {
+    "default_profile": "write",
     "default_model": {
       "provider": "google",
-      "model": "gemini-2.0-flash-thinking-exp"
+      "model": "gemini-2.0-flash"
     },
     "version": "2"
   },
