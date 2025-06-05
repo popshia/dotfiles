@@ -1,27 +1,15 @@
 hs.hotkey.bind({ "cmd" }, "g", function()
-	local browser = hs.application.get("Zen")
-	-- local browser = hs.application.get("Arc")
-	-- local browser = hs.application.get("Google Chrome")
-	-- local browser = hs.application.get("Safari")
+	local browser = hs.application.get("Arc")
 	if browser then
 		if browser:isFrontmost() then
-			browser:selectMenuItem("Hide Zen")
-			-- browser:selectMenuItem("Hide Arc")
-			-- browser:selectMenuItem("Hide Google Chrome")
-			-- browser:selectMenuItem("Hide Safari")
+			browser:selectMenuItem("Hide Arc")
 			-- browser:hide()
 		else
-			hs.application.launchOrFocus("Zen")
-			-- hs.application.launchOrFocus("Arc")
-			-- hs.application.launchOrFocus("Google Chrome")
-			-- hs.application.launchOrFocus("Safari")
+			hs.application.launchOrFocus("Arc")
 			-- browser:activate()
 		end
 	else
-		hs.application.launchOrFocus("Zen")
-		-- hs.application.launchOrFocus("Arc")
-		-- hs.application.launchOrFocus("Google Chrome")
-		-- hs.application.launchOrFocus("Safari")
+		hs.application.launchOrFocus("Arc")
 		-- browser:activate()
 	end
 end)
