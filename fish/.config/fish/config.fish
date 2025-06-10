@@ -23,13 +23,7 @@ set -gx STARSHIP_CONFIG ~/.config/starship/starship.toml
 # set abbreviations
 abbr -a vim nvim
 abbr -a lg lazygit
-abbr -a spp spotify_player
 abbr -a lr 'defaults write com.apple.dock ResetLaunchPad -bool true && killall Dock'
-abbr -a ld 'eza --only-dirs --icons always'
-abbr -a lf 'eza --all --classify --only-files --icons always --sort extension'
-abbr -a ll 'eza --all --long --group-directories-first --git --icons always --sort extension'
-abbr -a ls 'eza --all --grid --group-directories-first --icons always --sort extension'
-abbr -a lt 'eza --tree --level=3 --icons always --all --git-ignore --sort extension'
 
 # os specific configs
 switch (uname)
@@ -37,6 +31,19 @@ switch (uname)
         # Added by OrbStack: command-line tools and integration
         # This won't be added again if you remove it.
         source ~/.orbstack/shell/init2.fish 2>/dev/null || :
+
+        # >>> conda initialize >>>
+        # !! Contents within this block are managed by 'conda init' !!
+        if test -f /opt/homebrew/Caskroom/miniconda/base/bin/conda
+            eval /opt/homebrew/Caskroom/miniconda/base/bin/conda "shell.fish" hook $argv | source
+        else
+            if test -f "/opt/homebrew/Caskroom/miniconda/base/etc/fish/conf.d/conda.fish"
+                . "/opt/homebrew/Caskroom/miniconda/base/etc/fish/conf.d/conda.fish"
+            else
+                set -x PATH /opt/homebrew/Caskroom/miniconda/base/bin $PATH
+            end
+        end
+        # <<< conda initialize <<<
     case Linux
         set -gx LC_ALL C.UTF-8
         set -gx LANG C.UTF-8
@@ -46,20 +53,3 @@ switch (uname)
         set -gx XMODIFIERS @im fcitx
         fish_add_path ~/.local/bin
 end
-
-if status --is-interactive
-    pokemon-colorscripts -r
-end
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-if test -f /opt/homebrew/Caskroom/miniconda/base/bin/conda
-    eval /opt/homebrew/Caskroom/miniconda/base/bin/conda "shell.fish" hook $argv | source
-else
-    if test -f "/opt/homebrew/Caskroom/miniconda/base/etc/fish/conf.d/conda.fish"
-        . "/opt/homebrew/Caskroom/miniconda/base/etc/fish/conf.d/conda.fish"
-    else
-        set -x PATH /opt/homebrew/Caskroom/miniconda/base/bin $PATH
-    end
-end
-# <<< conda initialize <<<
