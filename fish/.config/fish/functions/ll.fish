@@ -1,3 +1,3 @@
 function ll
-    eza --all --long --group-directories-first --git --icons always --sort extension
+    eza --all --long --group-directories-first --git --icons always $argv
 end

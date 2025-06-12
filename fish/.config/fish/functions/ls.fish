@@ -1,3 +1,3 @@
 function ls
-    eza --all --grid --group-directories-first --icons always --sort extension
+    eza --all --grid --group-directories-first --icons always $argv
 end
