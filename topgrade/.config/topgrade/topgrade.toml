@@ -15,7 +15,7 @@
 # sudo_command = "sudo"
 
 # Disable specific steps - same options as the command line flag
-disable = ["system", "pnpm", "node", "uv"]
+disable = ["system", "pnpm", "node", "uv", "yazi"]
 
 # Ignore failures for these steps
 # ignore_failures = ["powershell"]
