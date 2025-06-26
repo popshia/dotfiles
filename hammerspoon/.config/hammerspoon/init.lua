@@ -1,15 +1,15 @@
 hs.hotkey.bind({ "cmd" }, "g", function()
-	local browser = hs.application.get("Arc")
+	local browser = hs.application.get("Zen")
 	if browser then
 		if browser:isFrontmost() then
-			browser:selectMenuItem("Hide Arc")
+			browser:selectMenuItem("Hide Zen")
 			-- browser:hide()
 		else
-			hs.application.launchOrFocus("Arc")
+			hs.application.launchOrFocus("Zen")
 			-- browser:activate()
 		end
 	else
-		hs.application.launchOrFocus("Arc")
+		hs.application.launchOrFocus("Zen")
 		-- browser:activate()
 	end
 end)
@@ -30,7 +30,7 @@ hs.hotkey.bind({ "cmd" }, "r", function()
 	end
 end)
 
-hs.hotkey.bind({ "cmd" }, "f", function()
+hs.hotkey.bind({ "cmd" }, "m", function()
 	local figma = hs.application.get("Figma Beta")
 	if figma then
 		if figma:isFrontmost() then

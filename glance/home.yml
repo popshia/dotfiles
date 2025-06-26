@@ -52,6 +52,10 @@
               show-thumbnails: false
               collapse-after: 10
               subreddit: neovim
+            - type: reddit
+              show-thumbnails: false
+              collapse-after: 10
+              subreddit: iOSBeta
             - type: rss
               title: The Verge
               style: vertical-list
@@ -74,10 +78,6 @@
               collapse-after: 10
             - type: lobsters
               collapse-after: 10
-            - type: reddit
-              show-thumbnails: false
-              collapse-after: 10
-              subreddit: Technology
 
         - type: videos
           style: grid-cards
@@ -174,7 +174,6 @@
             - never_loses
             - greentea
             - roger9527
-            - bebelolz
             - lolesportstw
             - LCK_Carry
             - theprimeagen
