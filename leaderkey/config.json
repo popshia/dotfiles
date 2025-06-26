@@ -1,98 +1,99 @@
 {
-  "actions" : [
+  "actions": [
     {
-      "actions" : [
+      "actions": [
         {
-          "key" : "l",
-          "type" : "application",
-          "value" : "/Applications/LINE.app"
+          "key": "l",
+          "type": "application",
+          "value": "/Applications/LINE.app"
         },
         {
-          "key" : "t",
-          "type" : "application",
-          "value" : "/Applications/Telegram.app"
+          "key": "t",
+          "type": "application",
+          "value": "/Applications/Telegram.app"
         },
         {
-          "key" : "s",
-          "type" : "application",
-          "value" : "/System/Applications/Music.app"
+          "key": "s",
+          "type": "application",
+          "value": "/Applications/Spotify.app"
         },
         {
-          "key" : "f",
-          "type" : "application",
-          "value" : "/Applications/Figma Beta.app"
+          "key": "f",
+          "type": "application",
+          "value": "/Applications/Figma Beta.app"
         },
         {
-          "key" : "m",
-          "type" : "application",
-          "value" : "/System/Applications/Mail.app"
+          "key": "m",
+          "type": "application",
+          "value": "/System/Applications/Mail.app"
         },
         {
-          "key" : "p",
-          "type" : "application",
-          "value" : "/System/Applications/Podcasts.app"
+          "key": "p",
+          "type": "application",
+          "value": "/System/Applications/Podcasts.app"
         },
         {
-          "key" : "d",
-          "type" : "application",
-          "value" : "/Applications/Discord.app"
+          "key": "d",
+          "type": "application",
+          "value": "/Applications/Discord.app"
         },
         {
-          "key" : "e",
-          "type" : "application",
-          "value" : "/System/Library/CoreServices/Finder.app"
+          "key": "e",
+          "type": "application",
+          "value": "/System/Library/CoreServices/Finder.app"
         },
         {
-          "key" : "i",
-          "type" : "application",
-          "value" : "/System/Applications/iPhone Mirroring.app"
+          "key": "i",
+          "type": "application",
+          "value": "/System/Applications/iPhone Mirroring.app"
         },
         {
-          "key" : "c",
-          "type" : "application",
-          "value" : "/Applications/calibre.app"
+          "key": "c",
+          "type": "application",
+          "value": "/Applications/calibre.app"
         },
         {
-          "key" : "n",
-          "type" : "application",
-          "value" : "/Applications/Notion.app"
+          "key": "n",
+          "type": "application",
+          "value": "/Applications/Notion.app"
         }
       ],
-      "key" : "o",
-      "label" : "Open",
-      "type" : "group"
+      "key": "o",
+      "label": "Open",
+      "type": "group"
     },
     {
-      "actions" : [
+      "actions": [
         {
-          "key" : "l",
-          "label" : "Lock Screen",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/system/lock-screen"
+          "key": "l",
+          "label": "Lock Screen",
+          "type": "url",
+          "value": "raycast://extensions/raycast/system/lock-screen"
         },
         {
-          "key" : "r",
-          "label" : "Restart",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/system/restart"
+          "key": "r",
+          "label": "Restart",
+          "type": "url",
+          "value": "raycast://extensions/raycast/system/restart"
         },
         {
-          "key" : "e",
-          "label" : "Empty Trash",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/system/empty-trash"
+          "key": "e",
+          "label": "Empty Trash",
+          "type": "url",
+          "value": "raycast://extensions/raycast/system/empty-trash"
         },
         {
-          "key" : "d",
-          "label" : "Show Desktop",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/system/show-desktop"
+          "key": "d",
+          "label": "Show Desktop",
+          "type": "url",
+          "value": "raycast://extensions/raycast/system/show-desktop"
         }
       ],
-      "key" : "a",
-      "label" : "Actions",
-      "type" : "group"
+      "key": "a",
+      "label": "Actions",
+      "type": "group"
     }
   ],
-  "type" : "group"
+  "type": "group"
 }
+
