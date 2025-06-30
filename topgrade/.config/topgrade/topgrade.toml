@@ -15,7 +15,7 @@ pre_sudo = true
 # sudo_command = "sudo"
 
 # Disable specific steps - same options as the command line flag
-disable = ["system", "pnpm", "node", "uv", "yazi"]
+disable = ["system", "pnpm", "uv", "yazi", "node"]
 
 # Ignore failures for these steps
 # ignore_failures = ["powershell"]
@@ -232,7 +232,7 @@ repos = [
 
 [npm]
 # Use sudo if the NPM directory isn't owned by the current user
-# use_sudo = true
+use_sudo = true
 
 
 [yarn]
