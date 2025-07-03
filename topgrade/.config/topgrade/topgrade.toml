@@ -15,7 +15,7 @@ pre_sudo = true
 # sudo_command = "sudo"
 
 # Disable specific steps - same options as the command line flag
-disable = ["system", "pnpm", "uv", "yazi", "node"]
+disable = ["system", "uv", "yazi", "node"]
 
 # Ignore failures for these steps
 # ignore_failures = ["powershell"]

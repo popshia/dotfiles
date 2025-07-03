@@ -1,3 +1,5 @@
+hs.application.enableSpotlightForNameSearches(true)
+
 hs.hotkey.bind({ "cmd" }, "g", function()
 	local browser = hs.application.get("Zen")
 	if browser then

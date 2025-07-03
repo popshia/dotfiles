@@ -44,6 +44,13 @@ switch (uname)
             end
         end
         # <<< conda initialize <<<
+
+        # pnpm
+        set -gx PNPM_HOME $HOME/Library/pnpm
+        if not string match -q -- $PNPM_HOME $PATH
+            set -gx PATH "$PNPM_HOME" $PATH
+        end
+        # pnpm end
     case Linux
         set -gx LC_ALL C.UTF-8
         set -gx LANG C.UTF-8
