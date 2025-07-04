@@ -1,17 +1,17 @@
 hs.application.enableSpotlightForNameSearches(true)
 
 hs.hotkey.bind({ "cmd" }, "g", function()
-	local browser = hs.application.get("Zen")
+	local browser = hs.application.get("Arc")
 	if browser then
 		if browser:isFrontmost() then
-			browser:selectMenuItem("Hide Zen")
+			browser:selectMenuItem("Hide Arc")
 			-- browser:hide()
 		else
-			hs.application.launchOrFocus("Zen")
+			hs.application.launchOrFocus("Arc")
 			-- browser:activate()
 		end
 	else
-		hs.application.launchOrFocus("Zen")
+		hs.application.launchOrFocus("Arc")
 		-- browser:activate()
 	end
 end)
