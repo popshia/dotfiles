@@ -87,6 +87,12 @@
           "label": "Show Desktop",
           "type": "url",
           "value": "raycast://extensions/raycast/system/show-desktop"
+        },
+        {
+          "key": "h",
+          "label": "Toggle Hidden Files",
+          "type": "url",
+          "value": "raycast://extensions/raycast/system/toggle-hidden-files"
         }
       ],
       "key": "a",
