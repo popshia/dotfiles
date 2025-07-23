@@ -236,6 +236,7 @@
                         "product_id": 1297,
                         "vendor_id": 1241
                     },
+                    "ignore_vendor_events": true,
                     "simple_modifications": [
                         {
                             "from": { "key_code": "escape" },
@@ -258,26 +259,36 @@
                             "to": [{ "key_code": "left_command" }]
                         },
                         {
-                            "from": { "consumer_key_code": "volume_decrement" },
-                            "to": [{ "consumer_key_code": "volume_increment" }]
-                        },
-                        {
-                            "from": { "consumer_key_code": "volume_increment" },
-                            "to": [{ "consumer_key_code": "volume_decrement" }]
-                        },
-                        {
-                            "from": { "key_code": "pause" },
-                            "to": [{ "consumer_key_code": "scan_previous_track" }]
+                            "from": { "key_code": "print_screen" },
+                            "to": [{ "consumer_key_code": "play_or_pause" }]
                         },
                         {
                             "from": { "key_code": "scroll_lock" },
-                            "to": [{ "consumer_key_code": "scan_next_track" }]
+                            "to": [{ "consumer_key_code": "scan_previous_track" }]
                         },
                         {
-                            "from": { "key_code": "print_screen" },
-                            "to": [{ "consumer_key_code": "play_or_pause" }]
+                            "from": { "key_code": "pause" },
+                            "to": [{ "consumer_key_code": "scan_next_track" }]
                         }
                     ]
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": true,
+                        "product_id": 1297,
+                        "vendor_id": 1241
+                    },
+                    "ignore": false,
+                    "ignore_vendor_events": true
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 50495,
+                        "vendor_id": 1133
+                    },
+                    "ignore_vendor_events": true
                 }
             ],
             "fn_function_keys": [
