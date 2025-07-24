@@ -33,17 +33,17 @@ hs.hotkey.bind({ "cmd" }, "r", function()
 end)
 
 hs.hotkey.bind({ "cmd" }, "m", function()
-	local figma = hs.application.get("Figma Beta")
+	local figma = hs.application.get("Figma")
 	if figma then
 		if figma:isFrontmost() then
-			figma:selectMenuItem("Hide Figma Beta")
+			figma:selectMenuItem("Hide Figma")
 			-- browser:hide()
 		else
-			hs.application.launchOrFocus("Figma Beta")
+			hs.application.launchOrFocus("Figma")
 			-- browser:activate()
 		end
 	else
-		hs.application.launchOrFocus("Figma Beta")
+		hs.application.launchOrFocus("Figma")
 		-- browser:activate()
 	end
 end)
