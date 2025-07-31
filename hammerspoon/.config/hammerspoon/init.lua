@@ -47,3 +47,19 @@ hs.hotkey.bind({ "cmd" }, "m", function()
 		-- browser:activate()
 	end
 end)
+
+hs.hotkey.bind({ "cmd" }, "d", function()
+	local Zed = hs.application.get("Zed")
+	if Zed then
+		if Zed:isFrontmost() then
+			Zed:selectMenuItem("Hide Zed")
+			-- browser:hide()
+		else
+			hs.application.launchOrFocus("Zed")
+			-- browser:activate()
+		end
+	else
+		hs.application.launchOrFocus("Zed")
+		-- browser:activate()
+	end
+end)

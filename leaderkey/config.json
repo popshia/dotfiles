@@ -20,7 +20,7 @@
         {
           "key": "f",
           "type": "application",
-          "value": "/Applications/Figma Beta.app"
+          "value": "/Applications/Figma.app"
         },
         {
           "key": "m",
@@ -56,6 +56,11 @@
           "key": "n",
           "type": "application",
           "value": "/Applications/Notion.app"
+        },
+        {
+          "key": "z",
+          "type": "application",
+          "value": "/Applications/Zed.app"
         }
       ],
       "key": "o",
@@ -102,4 +107,3 @@
   ],
   "type": "group"
 }
-

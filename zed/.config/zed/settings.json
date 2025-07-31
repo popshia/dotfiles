@@ -7,23 +7,28 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "icon_theme": "Zed (Default)",
-  "assistant": {
-    "default_profile": "write",
-    "default_model": {
-      "provider": "google",
-      "model": "gemini-2.0-flash"
-    },
-    "version": "2"
+  "restore_on_startup": "last_session",
+  "show_completions_on_input": true,
+  "cursor_blink": false,
+  "scrollbar": {
+    "show": "never"
   },
+  "vim_mode": true,
+  "vim": {
+    "use_system_clipboard": "always",
+    "use_smartcase_find": true,
+    "toggle_relative_line_numbers": true
+  },
+  "ui_font_size": 18,
+  "buffer_font_size": 16,
+  "buffer_font_family": "MonoLisaStatic Nerd Font",
+  "hide_mouse": "on_typing_and_movement",
   "theme": {
     "mode": "system",
     "light": "One Light",
     "dark": "Gruvbox Dark Hard"
   },
-  "features": {
-    "edit_prediction_provider": "zed"
-  },
+  "icon_theme": "Zed (Default)",
   "tabs": {
     "file_icons": true,
     "git_status": true
@@ -35,20 +40,17 @@
   "inlay_hints": {
     "enabled": true
   },
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
   "edit_predictions": {
-    "mode": "subtle"
+    "mode": "eager"
   },
-  "restore_on_startup": "last_session",
-  "show_completions_on_input": true,
-  "vim_mode": true,
-  "vim": {
-    "use_system_clipboard": "always",
-    "use_multiline_find": true,
-    "use_smartcase_find": true,
-    "toggle_relative_line_numbers": true
-  },
-  "ui_font_size": 18,
-  "buffer_font_size": 16,
-  "buffer_font_family": "MonoLisaStatic Nerd Font",
-  "hide_mouse": "on_typing_and_movement"
+  "agent": {
+    "default_profile": "write",
+    "default_model": {
+      "provider": "google",
+      "model": "gemini-2.0-flash"
+    }
+  }
 }
