@@ -7,39 +7,53 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "restore_on_startup": "last_session",
+  // options
+  "base_keymap": "VSCode",
   "show_completions_on_input": true,
   "cursor_blink": false,
   "scrollbar": {
-    "show": "never"
+    "show": "auto"
   },
+  "tabs": {
+    "file_icons": true,
+    "git_status": true
+  },
+  "indent_guides": {
+    "line_width": 2,
+    "active_line_width": 3,
+    "coloring": "indent_aware" // indent_aware
+  },
+  "inlay_hints": {
+    "enabled": true
+  },
+  "auto_install_extensions": {
+    "html": true,
+    "lua": true,
+    "basedpyright": true,
+    "swift": true,
+    "toml": true,
+    "git-firefly": true
+  },
+  // visuals
+  "icon_theme": "Zed (Default)",
+  "ui_font_size": 18,
+  "agent_font_size": 20,
+  "buffer_font_size": 16,
+  "buffer_font_family": "MonoLisaStatic Nerd Font",
+  "current_line_highlight": "line",
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Gruvbox Dark Hard"
+  },
+  // vim
   "vim_mode": true,
   "vim": {
     "use_system_clipboard": "always",
     "use_smartcase_find": true,
     "toggle_relative_line_numbers": true
   },
-  "ui_font_size": 18,
-  "buffer_font_size": 16,
-  "buffer_font_family": "MonoLisaStatic Nerd Font",
-  "hide_mouse": "on_typing_and_movement",
-  "theme": {
-    "mode": "system",
-    "light": "One Light",
-    "dark": "Gruvbox Dark Hard"
-  },
-  "icon_theme": "Zed (Default)",
-  "tabs": {
-    "file_icons": true,
-    "git_status": true
-  },
-  "indent_guides": {
-    "coloring": "fixed", // indent_aware
-    "background_coloring": "indent_aware" // disabled
-  },
-  "inlay_hints": {
-    "enabled": true
-  },
+  // ai
   "features": {
     "edit_prediction_provider": "zed"
   },
@@ -47,6 +61,7 @@
     "mode": "eager"
   },
   "agent": {
+    "always_allow_tool_actions": false,
     "default_profile": "write",
     "default_model": {
       "provider": "google",

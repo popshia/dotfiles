@@ -11,7 +11,8 @@
     "bindings": {
       "shift-s": "vim::PushAddSurrounds",
       "shift-j": "editor::MoveLineDown",
-      "shift-k": "editor::MoveLineUp"
+      "shift-k": "editor::MoveLineUp",
+      "tab": "assistant::InlineAssist"
     }
   },
   {
@@ -44,6 +45,7 @@
       "space c a": "editor::ToggleCodeActions",
       "space d s": "outline::Toggle",
       "space f f": "editor::Format",
+      "space c p": "copilot::Suggest",
       // search
       "space s f": "file_finder::Toggle",
       "space s b": "tab_switcher::Toggle",
@@ -55,9 +57,7 @@
     "context": "Dock",
     "bindings": {
       "ctrl-w h": "workspace::ActivatePaneLeft",
-      "ctrl-w l": "workspace::ActivatePaneRight",
-      "ctrl-w k": "workspace::ActivatePaneUp",
-      "ctrl-w j": "workspace::ActivatePaneDown"
+      "ctrl-w l": "workspace::ActivatePaneRight"
     }
   },
   {
